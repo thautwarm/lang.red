@@ -24,7 +24,7 @@ __regex__ = __regex_def__(
                     '--','++','**','+','-','*',          # arithmetic 
                     '^^','^','&&','&',                   # bit operators
                     '%','$','@','~',                     # other operators
-                    '??', '?'                           # cs-like is-null query, ruby-like truth-value query
+                    '??', '?'                            # cs-like is-null query, ruby-like truth-value query
                     )
 def token(input):
         return __regex__.findall(input)

@@ -95,8 +95,21 @@ expression[
                                                     ]
                                                 ]
                                             ]
-                                            endOfBranch[
-                                                "otherwise"
+                                            branch[
+                                                "when"
+                                                expression[
+                                                    dualOperation[
+                                                        unaryOperation[
+                                                            atomExpr[
+                                                                atom[
+                                                                    symbol[
+                                                                        "otherwise"
+                                                                    ]
+                                                                ]
+                                                            ]
+                                                        ]
+                                                    ]
+                                                ]
                                                 "then"
                                                 expression[
                                                     dualOperation[

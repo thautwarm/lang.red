@@ -10,9 +10,9 @@ bit     ::= R'0[XxOoBb][\da-fA-F]+'; # ast
 
 
 
-symbol ::=  '`' word '`' | word;
-
-argument ::=  (declaration| expression) (',' (declaration|expression) )*;
+symbol    ::=  '`' word '`' | word;
+argument  ::= ['~'] expression | symbol [':' typedef] ;
+arguments ::=  argument (',' argument)*;
 
 declaration ::= symbol ( '(' [argument] ')' )* [':' typedef];
 
@@ -20,7 +20,7 @@ definition Throw ['\n']
     ::= declaration '=' newline* expression;
 
 body Throw ['\n']  
-    ::= '{' (newline* expression)* '}';
+    ::= '{' (newline* expression)* newline* '}';
 # a = { ... } 
 
 branch 
@@ -40,11 +40,11 @@ expression ::= body | guard | definition | dualOperation;
 
 dualOperation ::= unaryOperation (dualOperator unaryOperation)*;
 
-dualOperator ::= '+' | '-' | '*' | '/' | '%'  |
+dualOperator ::= '+'  | '-' | '*' | '/' | '%'  |
                   '++'| '--'| '**'| '//'|
                   '^' | '&' | '|' | '>>'| '<<' |
                   '^^'| '&&'| '||'|
-                  '~' |'and'| 'or'| 'in'|
+                       'and'| 'or'| 'in'|
                   '$' | '@' | '|>'| 
                   '>' | '<' | '>='| '<='|
                   '=='| 

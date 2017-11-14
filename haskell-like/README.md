@@ -28,7 +28,8 @@ f(x)(head|tail)(y) =
 因为用Python模仿Haskell很舒服。
 
 ## 为什么不全部模仿
-因为啊， haskell的parser应该有上下文有关的部分, EBNFParser解决不来的。  
+因为啊， haskell的parser应该有上下文有关的部分, EBNFParser解决不来的，当然也可能是我智商不够  
+(刚刚突然想到怎么实现游标卡尺XD  
 而且我想要把parser的顶部做成一个expression。  
 
 

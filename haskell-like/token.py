@@ -1,4 +1,5 @@
 def __escape__(tk):
+    
     if tk.startswith('R:'):
         return tk[2:]
     else:
@@ -7,24 +8,26 @@ def __escape__(tk):
 __regex_def__ = lambda *tkdef : re.compile("|".join(map(__escape__, tkdef)))
 
 __regex__ = __regex_def__(
-                    '\\',                                # escape
+                    '.',        
+                    '\\','`',                            # escape, quote
                     '|>',                                # pipeline
                     '->', '=>',                          # lambda def
-                    '::', ':'                            # type anno
+                    '::', ':',                           # type anno
                     '{', '}', '(', ')', '[', ']',        # parentheses, brackets
                     'R:[a-zA-Z_][a-z0-9A-Z_]*',          # name
-                    ' ','\n',                            # space
-                    'R:\d+(?:\.\d+|)(?:E\-{0,1}\d+|)',   # decimal
+                    '[\u4e00-\u9fa5]+',                  # unicode
+                    '\n',                                # newline
+                    'R:\d+',   # decimal
                     'R:0[XxOoBb][\da-fA-F]+',            # bin, oct, hex
                     '"', "'", ';', '`', ',',             # string, macro, comma
                     '//','/','||','|','>>','<<',         # (f)div, (x)or, stream
+                    '<-','=',                            # notation 
                     '>=','<=','>', '<',                  # le, ge
                     '==','=','!=','!',                   # eq
-                    '<-','=',                            # notation 
                     '--','++','**','+','-','*',          # arithmetic 
                     '^^','^','&&','&',                   # bit operators
                     '%','$','@','~',                     # other operators
-                    '??', '?'                            # cs-like is-null query, ruby-like truth-value query
+                    '??', '?',                           # cs-like is-null query, ruby-like truth-value query
                     )
 def token(input):
         return __regex__.findall(input)

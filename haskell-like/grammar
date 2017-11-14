@@ -1,11 +1,113 @@
+# Basic Version
 Token token
 
-var    := R'[a-zA-Z_][a-z0-9A-Z_]*';
-escape := '\\' ;
-space  := ' '  ;
-newline:= '\n' ;
-decimal:= R'\d+(?:\.\d+|)(?:E\-{0,1}\d+|)';
-bit    := R'0[XxOoBb][\da-fA-F]+';
+word    := R'[a-zA-Z_][a-z0-9A-Z_]*';
+escape  := '\\' ;
+newline := '\n' ;
+number  := R'\d+';
+
+bit     ::= R'0[XxOoBb][\da-fA-F]+'; # ast
+
+
+
+symbol ::=  '`' word '`' | word;
+
+declaration ::= symbol [':' typedef];
+
+definition Throw ['\n'] 
+    ::= declaration '=' newline* expression;
+
+body Throw ['\n']  
+    ::= '{' (newline* expression)* '}';
+# a = { ... } 
+
+branch Throw ['\n']
+    ::= 'when' expression '=' expression;
+
+
+endOfBranch Throw ['\n']  # guard-like(god-like?emmmm....
+    ::= 'otherwise' '=' expression;
+
+guard Throw ['\n'] 
+    ::= branch (newline* branch)* [endOfBranch]; 
+
+expression ::= body | guard | dualOperation;
+
+dualOperation ::= unaryOperation (dualOperator unaryOperation)*;
+
+dualOperator ::= '+' | '-' | '*' | '/' | '%'  |
+                  '++'| '--'| '**'| '//'|
+                  '^' | '&' | '|' | '>>'| '<<' |
+                  '^^'| '&&'| '||'|
+                  '~' |'and'| 'or'| 'in'|
+                  '$' | '@' | '|>'| '<-'|
+                  '>' | '<' | '>='| '<='|
+                  '=' | '=='
+                  ;
+unaryHeadOperator ::= 'not' | '!';
+unaryLastOperator ::= '??'  | '?';
+unaryOperation ::= unaryHeadOperator* atomExpr [unaryLastOperator];
+
+lambdef ::= declaration '=>' expression ;
+
+atomExpr ::= lambdef | atom trailer* ;
+
+trailer ::= '[' expression (',' expression)* ']' | '(' [expression (',' expression)*] ')' ;
+
+decimal ::=  number ['.' number] ['E' ['-'] number] ;
+
+const  ::= 'null' | 'false' | 'true';
+
+anyChar := R'\w\W';
+
+string ::= '"' ('\\' '"'| anyChar)* '"';
+
+atom ::= decimal | # decimal 
+         const   |
+         symbol  |
+         string  |
+         symbol  |
+         '(' expression ')';
+    
+typedef ::= typedef '->' typedef | symbol;
+
+
+
+
+
+         
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# a b = 
+#   when b < 5 = 10
+#   otherwise = 20
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
 
 
 

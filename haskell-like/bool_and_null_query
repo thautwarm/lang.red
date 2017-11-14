@@ -1,0 +1,37 @@
+expression[
+    dualOperation[
+        unaryOperation[
+            unaryHeadOperator[
+                "not"
+            ]
+            atomExpr[
+                atom[
+                    decimal[
+                        "1"
+                    ]
+                ]
+            ]
+            unaryLastOperator[
+                "?"
+            ]
+        ]
+        dualOperator[
+            "+"
+        ]
+        unaryOperation[
+            unaryHeadOperator[
+                "not"
+            ]
+            atomExpr[
+                atom[
+                    decimal[
+                        "2"
+                    ]
+                ]
+            ]
+            unaryLastOperator[
+                "??"
+            ]
+        ]
+    ]
+]

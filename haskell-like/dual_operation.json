@@ -1,0 +1,269 @@
+{
+    "name": "expression",
+    "value": [
+        {
+            "name": "dualOperation",
+            "value": [
+                {
+                    "name": "unaryOperation",
+                    "value": [
+                        {
+                            "name": "atomExpr",
+                            "value": [
+                                {
+                                    "name": "atom",
+                                    "value": [
+                                        {
+                                            "name": "decimal",
+                                            "value": [
+                                                "1"
+                                            ],
+                                            "meta": [
+                                                0,
+                                                0,
+                                                "<input>"
+                                            ]
+                                        }
+                                    ],
+                                    "meta": [
+                                        0,
+                                        0,
+                                        "<input>"
+                                    ]
+                                }
+                            ],
+                            "meta": [
+                                0,
+                                0,
+                                "<input>"
+                            ]
+                        }
+                    ],
+                    "meta": [
+                        0,
+                        0,
+                        "<input>"
+                    ]
+                },
+                {
+                    "name": "dualOperator",
+                    "value": [
+                        "+"
+                    ],
+                    "meta": [
+                        0,
+                        1,
+                        "<input>"
+                    ]
+                },
+                {
+                    "name": "unaryOperation",
+                    "value": [
+                        {
+                            "name": "atomExpr",
+                            "value": [
+                                {
+                                    "name": "atom",
+                                    "value": [
+                                        {
+                                            "name": "decimal",
+                                            "value": [
+                                                "2"
+                                            ],
+                                            "meta": [
+                                                0,
+                                                2,
+                                                "<input>"
+                                            ]
+                                        }
+                                    ],
+                                    "meta": [
+                                        0,
+                                        2,
+                                        "<input>"
+                                    ]
+                                }
+                            ],
+                            "meta": [
+                                0,
+                                2,
+                                "<input>"
+                            ]
+                        }
+                    ],
+                    "meta": [
+                        0,
+                        2,
+                        "<input>"
+                    ]
+                },
+                {
+                    "name": "dualOperator",
+                    "value": [
+                        "|>"
+                    ],
+                    "meta": [
+                        0,
+                        3,
+                        "<input>"
+                    ]
+                },
+                {
+                    "name": "unaryOperation",
+                    "value": [
+                        {
+                            "name": "atomExpr",
+                            "value": [
+                                {
+                                    "name": "atom",
+                                    "value": [
+                                        {
+                                            "name": "decimal",
+                                            "value": [
+                                                "2"
+                                            ],
+                                            "meta": [
+                                                0,
+                                                4,
+                                                "<input>"
+                                            ]
+                                        }
+                                    ],
+                                    "meta": [
+                                        0,
+                                        4,
+                                        "<input>"
+                                    ]
+                                }
+                            ],
+                            "meta": [
+                                0,
+                                4,
+                                "<input>"
+                            ]
+                        }
+                    ],
+                    "meta": [
+                        0,
+                        4,
+                        "<input>"
+                    ]
+                },
+                {
+                    "name": "dualOperator",
+                    "value": [
+                        "*"
+                    ],
+                    "meta": [
+                        0,
+                        5,
+                        "<input>"
+                    ]
+                },
+                {
+                    "name": "unaryOperation",
+                    "value": [
+                        {
+                            "name": "atomExpr",
+                            "value": [
+                                {
+                                    "name": "atom",
+                                    "value": [
+                                        {
+                                            "name": "decimal",
+                                            "value": [
+                                                "3"
+                                            ],
+                                            "meta": [
+                                                0,
+                                                6,
+                                                "<input>"
+                                            ]
+                                        }
+                                    ],
+                                    "meta": [
+                                        0,
+                                        6,
+                                        "<input>"
+                                    ]
+                                }
+                            ],
+                            "meta": [
+                                0,
+                                6,
+                                "<input>"
+                            ]
+                        }
+                    ],
+                    "meta": [
+                        0,
+                        6,
+                        "<input>"
+                    ]
+                },
+                {
+                    "name": "dualOperator",
+                    "value": [
+                        "or"
+                    ],
+                    "meta": [
+                        0,
+                        7,
+                        "<input>"
+                    ]
+                },
+                {
+                    "name": "unaryOperation",
+                    "value": [
+                        {
+                            "name": "atomExpr",
+                            "value": [
+                                {
+                                    "name": "atom",
+                                    "value": [
+                                        {
+                                            "name": "decimal",
+                                            "value": [
+                                                "5"
+                                            ],
+                                            "meta": [
+                                                0,
+                                                8,
+                                                "<input>"
+                                            ]
+                                        }
+                                    ],
+                                    "meta": [
+                                        0,
+                                        8,
+                                        "<input>"
+                                    ]
+                                }
+                            ],
+                            "meta": [
+                                0,
+                                8,
+                                "<input>"
+                            ]
+                        }
+                    ],
+                    "meta": [
+                        0,
+                        8,
+                        "<input>"
+                    ]
+                }
+            ],
+            "meta": [
+                0,
+                0,
+                "<input>"
+            ]
+        }
+    ],
+    "meta": [
+        0,
+        0,
+        "<input>"
+    ]
+}

@@ -21,7 +21,7 @@ __regex__ = __regex_def__(
                     'R:0[XxOoBb][\da-fA-F]+',            # bin, oct, hex
                     '"', "'", ';', '`', ',',             # string, macro, comma
                     '//','/','||','|','>>','<<',         # (f)div, (x)or, stream
-                    '<-','=',                            # notation 
+                    '<-',                                # notation 
                     '>=','<=','>', '<',                  # le, ge
                     '==','=','!=','!',                   # eq
                     '--','++','**','+','-','*',          # arithmetic 

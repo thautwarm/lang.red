@@ -12,7 +12,9 @@ bit     ::= R'0[XxOoBb][\da-fA-F]+'; # ast
 
 symbol ::=  '`' word '`' | word;
 
-declaration ::= symbol [':' typedef];
+argument ::=  (declaration| expression) (',' (declaration|expression) )*;
+
+declaration ::= symbol ( '(' [argument] ')' )* [':' typedef];
 
 definition Throw ['\n'] 
     ::= declaration '=' newline* expression;
@@ -21,17 +23,20 @@ body Throw ['\n']
     ::= '{' (newline* expression)* '}';
 # a = { ... } 
 
-branch Throw ['\n']
-    ::= 'when' expression '=' expression;
+branch 
+    ::= 'when' expression 'then' expression;
 
 
-endOfBranch Throw ['\n']  # guard-like(god-like?emmmm....
-    ::= 'otherwise' '=' expression;
+endOfBranch  # guard-like(god-like?emmmm....
+    ::= 'otherwise' 'then' expression;
 
 guard Throw ['\n'] 
-    ::= branch (newline* branch)* [endOfBranch]; 
+    ::= (branch newline*)+ [endOfBranch]; 
 
-expression ::= body | guard | dualOperation;
+# a = when false then 2
+#     otherwise then 
+
+expression ::= body | guard | definition | dualOperation;
 
 dualOperation ::= unaryOperation (dualOperator unaryOperation)*;
 
@@ -40,10 +45,11 @@ dualOperator ::= '+' | '-' | '*' | '/' | '%'  |
                   '^' | '&' | '|' | '>>'| '<<' |
                   '^^'| '&&'| '||'|
                   '~' |'and'| 'or'| 'in'|
-                  '$' | '@' | '|>'| '<-'|
+                  '$' | '@' | '|>'| 
                   '>' | '<' | '>='| '<='|
-                  '=' | '=='
-                  ;
+                  '=='| 
+                  '<-';
+
 unaryHeadOperator ::= 'not' | '!';
 unaryLastOperator ::= '??'  | '?';
 unaryOperation ::= unaryHeadOperator* atomExpr [unaryLastOperator];
@@ -58,7 +64,7 @@ decimal ::=  number ['.' number] ['E' ['-'] number] ;
 
 const  ::= 'null' | 'false' | 'true';
 
-anyChar := R'\w\W';
+anyChar := R'[^"]';
 
 string ::= '"' ('\\' '"'| anyChar)* '"';
 
@@ -69,7 +75,7 @@ atom ::= decimal | # decimal
          symbol  |
          '(' expression ')';
     
-typedef ::= typedef '->' typedef | symbol;
+typedef ::= '(' typedef ')' | typedef '->' typedef | symbol;
 
 
 

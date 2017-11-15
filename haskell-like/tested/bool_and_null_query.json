@@ -22,12 +22,22 @@
                             "name": "atomExpr",
                             "value": [
                                 {
-                                    "name": "atom",
+                                    "name": "typing",
                                     "value": [
                                         {
-                                            "name": "decimal",
+                                            "name": "atom",
                                             "value": [
-                                                "1"
+                                                {
+                                                    "name": "decimal",
+                                                    "value": [
+                                                        "1"
+                                                    ],
+                                                    "meta": [
+                                                        0,
+                                                        1,
+                                                        "<input>"
+                                                    ]
+                                                }
                                             ],
                                             "meta": [
                                                 0,
@@ -96,12 +106,22 @@
                             "name": "atomExpr",
                             "value": [
                                 {
-                                    "name": "atom",
+                                    "name": "typing",
                                     "value": [
                                         {
-                                            "name": "decimal",
+                                            "name": "atom",
                                             "value": [
-                                                "2"
+                                                {
+                                                    "name": "decimal",
+                                                    "value": [
+                                                        "2"
+                                                    ],
+                                                    "meta": [
+                                                        0,
+                                                        5,
+                                                        "<input>"
+                                                    ]
+                                                }
                                             ],
                                             "meta": [
                                                 0,

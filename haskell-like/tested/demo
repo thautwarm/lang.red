@@ -2,130 +2,31 @@ expression[
     definition[
         declaration[
             symbol[
-                "f"
+                "result"
             ]
-            "("
-            argument[
-                expression[
-                    dualOperation[
-                        unaryOperation[
-                            atomExpr[
-                                atom[
-                                    symbol[
-                                        "x"
-                                    ]
-                                ]
-                            ]
-                        ]
-                    ]
-                ]
-            ]
-            ")"
-            "("
-            argument[
-                expression[
-                    dualOperation[
-                        unaryOperation[
-                            atomExpr[
-                                atom[
-                                    symbol[
-                                        "head"
-                                    ]
-                                ]
-                            ]
-                        ]
-                        dualOperator[
-                            "|"
-                        ]
-                        unaryOperation[
-                            atomExpr[
-                                atom[
-                                    symbol[
-                                        "tail"
-                                    ]
-                                ]
-                            ]
-                        ]
-                    ]
-                ]
-            ]
-            ")"
-            "("
-            argument[
-                expression[
-                    dualOperation[
-                        unaryOperation[
-                            atomExpr[
-                                atom[
-                                    symbol[
-                                        "y"
-                                    ]
-                                ]
-                            ]
-                        ]
-                    ]
-                ]
-            ]
-            ")"
         ]
-        "="
         expression[
-            guard[
-                branch[
-                    "when"
-                    expression[
-                        dualOperation[
-                            unaryOperation[
-                                atomExpr[
-                                    atom[
-                                        symbol[
-                                            "head"
-                                        ]
-                                    ]
-                                ]
-                            ]
-                            dualOperator[
-                                ">"
-                            ]
-                            unaryOperation[
-                                atomExpr[
-                                    atom[
-                                        symbol[
-                                            "x"
-                                        ]
-                                    ]
-                                    trailer[
-                                        "("
-                                        expression[
-                                            dualOperation[
-                                                unaryOperation[
-                                                    atomExpr[
-                                                        atom[
-                                                            symbol[
-                                                                "y"
-                                                            ]
-                                                        ]
-                                                    ]
-                                                ]
-                                            ]
-                                        ]
-                                        ")"
-                                    ]
+            dualOperation[
+                unaryOperation[
+                    atomExpr[
+                        typing[
+                            atom[
+                                symbol[
+                                    "if"
                                 ]
                             ]
                         ]
-                    ]
-                    "then"
-                    expression[
-                        body[
-                            "{"
+                        trailer[
+                            "("
                             expression[
                                 dualOperation[
                                     unaryOperation[
                                         atomExpr[
-                                            atom[
-                                                symbol[
-                                                    "x"
+                                            typing[
+                                                atom[
+                                                    decimal[
+                                                        "1"
+                                                    ]
                                                 ]
                                             ]
                                         ]
@@ -135,84 +36,96 @@ expression[
                                     ]
                                     unaryOperation[
                                         atomExpr[
-                                            atom[
-                                                symbol[
-                                                    "y"
+                                            typing[
+                                                atom[
+                                                    decimal[
+                                                        "2"
+                                                    ]
+                                                ]
+                                            ]
+                                        ]
+                                    ]
+                                    dualOperator[
+                                        "=="
+                                    ]
+                                    unaryOperation[
+                                        atomExpr[
+                                            typing[
+                                                atom[
+                                                    decimal[
+                                                        "5"
+                                                    ]
                                                 ]
                                             ]
                                         ]
                                     ]
                                 ]
                             ]
-                            "}"
+                            ")"
+                        ]
+                        trailer[
+                            "("
+                            expression[
+                                dualOperation[
+                                    unaryOperation[
+                                        atomExpr[
+                                            typing[
+                                                atom[
+                                                    symbol[
+                                                        "a2"
+                                                    ]
+                                                ]
+                                            ]
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            ")"
+                        ]
+                        trailer[
+                            "("
+                            expression[
+                                dualOperation[
+                                    unaryOperation[
+                                        atomExpr[
+                                            typing[
+                                                atom[
+                                                    string[
+                                                        """
+                                                        "fafafa"
+                                                        """
+                                                    ]
+                                                ]
+                                            ]
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            ")"
                         ]
                     ]
                 ]
-                branch[
-                    "when"
-                    expression[
-                        dualOperation[
-                            unaryOperation[
-                                atomExpr[
-                                    atom[
-                                        symbol[
-                                            "head"
-                                        ]
-                                    ]
-                                ]
-                            ]
-                            dualOperator[
-                                "=="
-                            ]
-                            unaryOperation[
-                                atomExpr[
-                                    atom[
-                                        symbol[
-                                            "y"
-                                        ]
-                                    ]
-                                ]
-                            ]
-                        ]
-                    ]
-                    "then"
-                    expression[
-                        dualOperation[
-                            unaryOperation[
-                                atomExpr[
-                                    atom[
-                                        symbol[
-                                            "head"
-                                        ]
-                                    ]
-                                ]
-                            ]
-                            dualOperator[
-                                "|>"
-                            ]
-                            unaryOperation[
-                                atomExpr[
-                                    atom[
-                                        symbol[
-                                            "x"
-                                        ]
-                                    ]
-                                ]
-                            ]
-                        ]
-                    ]
+            ]
+        ]
+    ]
+    "
+"
+    whereSyntax[
+        "where"
+        definition[
+            declaration[
+                symbol[
+                    "a2"
                 ]
-                endOfBranch[
-                    "otherwise"
-                    "then"
-                    expression[
-                        dualOperation[
-                            unaryOperation[
-                                atomExpr[
-                                    atom[
-                                        const[
-                                            "null"
-                                        ]
+            ]
+            expression[
+                dualOperation[
+                    unaryOperation[
+                        atomExpr[
+                            typing[
+                                atom[
+                                    decimal[
+                                        "10"
                                     ]
                                 ]
                             ]

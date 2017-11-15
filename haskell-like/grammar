@@ -10,17 +10,23 @@ bit     ::= R'0[XxOoBb][\da-fA-F]+'; # ast
 
 
 
-symbol    ::=  '`' word '`' | word;
-argument  ::= ['~'] expression | symbol [':' typedef] ;
-arguments ::=  argument (',' argument)*;
+symbol  ::=  ['~'] word;
+# `~` means the reference.
 
-declaration ::= symbol ( '(' [argument] ')' )* [':' typedef];
+argument  
+        ::= expression ;
+        
+arguments 
+        ::=  argument (',' argument)*;
 
-definition Throw ['\n'] 
+declaration 
+        ::= symbol ( '(' [argument] ')' )* [':' typedef];
+
+definition Throw ['\n', '='] 
     ::= declaration '=' newline* expression;
 
 body Throw ['\n']  
-    ::= '{' (newline* expression)* newline* '}';
+    ::= '{'  (newline* expression)* newline* '}';
 # a = { ... } 
 
 branch 
@@ -36,11 +42,20 @@ guard Throw ['\n']
 # a = when false then 2
 #     otherwise then 
 
-expression ::= body | guard | definition | dualOperation;
+whereSyntax
+    ::= 'where' (body | definition);
 
-dualOperation ::= unaryOperation (dualOperator unaryOperation)*;
+expression 
+    ::= guard | definition [newline* whereSyntax]| dualOperation | macro;
 
-dualOperator ::= '+'  | '-' | '*' | '/' | '%'  |
+macro
+    ::= '`' expression ;
+
+dualOperation 
+    ::= unaryOperation (dualOperator unaryOperation)*;
+
+dualOperator 
+    ::=           '+' | '-' | '*' | '/' | '%'  |
                   '++'| '--'| '**'| '//'|
                   '^' | '&' | '|' | '>>'| '<<' |
                   '^^'| '&&'| '||'|
@@ -50,32 +65,49 @@ dualOperator ::= '+'  | '-' | '*' | '/' | '%'  |
                   '=='| 
                   '<-';
 
-unaryHeadOperator ::= 'not' | '!';
-unaryLastOperator ::= '??'  | '?';
-unaryOperation ::= unaryHeadOperator* atomExpr [unaryLastOperator];
+unaryHeadOperator 
+    ::= 'not' | '!' | '+' | '-';
+unaryLastOperator 
+    ::= '??'  | '?';
+unaryOperation 
+    ::= unaryHeadOperator* atomExpr [unaryLastOperator];
 
-lambdef ::= declaration '=>' expression ;
+lambdef 
+    ::= '(' [arguments] ')' '=>' expression;
 
-atomExpr ::= lambdef | atom trailer* ;
+atomExpr 
+    ::= lambdef | typing trailer* ;
 
-trailer ::= '[' expression (',' expression)* ']' | '(' [expression (',' expression)*] ')' ;
+trailer 
+    ::= '[' expression (',' expression)* ']' |
+        '(' [expression (',' expression)*] ')' ;
 
-decimal ::=  number ['.' number] ['E' ['-'] number] ;
+decimal 
+    ::=  number ['.' number] ['E' ['-'] number] ;
 
-const  ::= 'null' | 'false' | 'true';
+const  
+    ::= 'null' | 'false' | 'true';
 
-anyChar := R'[^"]';
+anyChar := R'[^"]+';
 
-string ::= '"' ('\\' '"'| anyChar)* '"';
+string 
+    ::= '"' ('\\' '"'| anyChar)* '"';
 
-atom ::= decimal | # decimal 
+typing 
+    ::= atom [':' typedef] ;
+
+atom 
+    ::=  decimal | # decimal
          const   |
          symbol  |
          string  |
          symbol  |
+         body    |
          '(' expression ')';
     
-typedef ::= '(' typedef ')' | typedef '->' typedef | symbol;
+typedef ::= '(' typedef ')' |
+            typedef '->' typedef |
+            symbol;
 
 
 

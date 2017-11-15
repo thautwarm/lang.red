@@ -3,19 +3,37 @@ expression[
         unaryOperation[
             atomExpr[
                 lambdef[
-                    declaration[
-                        symbol[
-                            "a"
+                    "("
+                    arguments[
+                        argument[
+                            expression[
+                                dualOperation[
+                                    unaryOperation[
+                                        atomExpr[
+                                            typing[
+                                                atom[
+                                                    symbol[
+                                                        "a"
+                                                    ]
+                                                ]
+                                            ]
+                                        ]
+                                    ]
+                                ]
+                            ]
                         ]
                     ]
+                    ")"
                     "=>"
                     expression[
                         dualOperation[
                             unaryOperation[
                                 atomExpr[
-                                    atom[
-                                        symbol[
-                                            "a"
+                                    typing[
+                                        atom[
+                                            symbol[
+                                                "a"
+                                            ]
                                         ]
                                     ]
                                 ]
@@ -25,9 +43,11 @@ expression[
                             ]
                             unaryOperation[
                                 atomExpr[
-                                    atom[
-                                        decimal[
-                                            "1"
+                                    typing[
+                                        atom[
+                                            decimal[
+                                                "1"
+                                            ]
                                         ]
                                     ]
                                 ]

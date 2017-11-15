@@ -3,41 +3,59 @@ expression[
         unaryOperation[
             atomExpr[
                 lambdef[
-                    declaration[
-                        symbol[
-                            "b"
-                        ]
-                        ":"
-                        typedef[
-                            typedef[
-                                typedef[
-                                    symbol[
-                                        "int"
+                    "("
+                    arguments[
+                        argument[
+                            expression[
+                                dualOperation[
+                                    unaryOperation[
+                                        atomExpr[
+                                            typing[
+                                                atom[
+                                                    symbol[
+                                                        "b"
+                                                    ]
+                                                ]
+                                                ":"
+                                                typedef[
+                                                    typedef[
+                                                        typedef[
+                                                            symbol[
+                                                                "int"
+                                                            ]
+                                                        ]
+                                                        "->"
+                                                        typedef[
+                                                            symbol[
+                                                                "int"
+                                                            ]
+                                                        ]
+                                                    ]
+                                                    "->"
+                                                    typedef[
+                                                        symbol[
+                                                            "int"
+                                                        ]
+                                                    ]
+                                                ]
+                                            ]
+                                        ]
                                     ]
-                                ]
-                                "->"
-                                typedef[
-                                    symbol[
-                                        "int"
-                                    ]
-                                ]
-                            ]
-                            "->"
-                            typedef[
-                                symbol[
-                                    "int"
                                 ]
                             ]
                         ]
                     ]
+                    ")"
                     "=>"
                     expression[
                         dualOperation[
                             unaryOperation[
                                 atomExpr[
-                                    atom[
-                                        symbol[
-                                            "a"
+                                    typing[
+                                        atom[
+                                            symbol[
+                                                "a"
+                                            ]
                                         ]
                                     ]
                                 ]
@@ -47,9 +65,11 @@ expression[
                             ]
                             unaryOperation[
                                 atomExpr[
-                                    atom[
-                                        decimal[
-                                            "1"
+                                    typing[
+                                        atom[
+                                            decimal[
+                                                "1"
+                                            ]
                                         ]
                                     ]
                                 ]

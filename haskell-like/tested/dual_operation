@@ -2,9 +2,11 @@ expression[
     dualOperation[
         unaryOperation[
             atomExpr[
-                atom[
-                    decimal[
-                        "1"
+                typing[
+                    atom[
+                        decimal[
+                            "1"
+                        ]
                     ]
                 ]
             ]
@@ -14,9 +16,11 @@ expression[
         ]
         unaryOperation[
             atomExpr[
-                atom[
-                    decimal[
-                        "2"
+                typing[
+                    atom[
+                        decimal[
+                            "2"
+                        ]
                     ]
                 ]
             ]
@@ -26,9 +30,11 @@ expression[
         ]
         unaryOperation[
             atomExpr[
-                atom[
-                    decimal[
-                        "2"
+                typing[
+                    atom[
+                        decimal[
+                            "2"
+                        ]
                     ]
                 ]
             ]
@@ -38,9 +44,11 @@ expression[
         ]
         unaryOperation[
             atomExpr[
-                atom[
-                    decimal[
-                        "3"
+                typing[
+                    atom[
+                        decimal[
+                            "3"
+                        ]
                     ]
                 ]
             ]
@@ -50,9 +58,11 @@ expression[
         ]
         unaryOperation[
             atomExpr[
-                atom[
-                    decimal[
-                        "5"
+                typing[
+                    atom[
+                        decimal[
+                            "5"
+                        ]
                     ]
                 ]
             ]

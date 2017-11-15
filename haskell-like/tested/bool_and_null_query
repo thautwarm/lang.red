@@ -5,9 +5,11 @@ expression[
                 "not"
             ]
             atomExpr[
-                atom[
-                    decimal[
-                        "1"
+                typing[
+                    atom[
+                        decimal[
+                            "1"
+                        ]
                     ]
                 ]
             ]
@@ -23,9 +25,11 @@ expression[
                 "not"
             ]
             atomExpr[
-                atom[
-                    decimal[
-                        "2"
+                typing[
+                    atom[
+                        decimal[
+                            "2"
+                        ]
                     ]
                 ]
             ]

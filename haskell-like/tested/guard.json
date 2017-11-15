@@ -456,7 +456,7 @@
                                                                                                                                                                                     "name": "atom",
                                                                                                                                                                                     "value": [
                                                                                                                                                                                         {
-                                                                                                                                                                                            "name": "const",
+                                                                                                                                                                                            "name": "symbol",
                                                                                                                                                                                             "value": [
                                                                                                                                                                                                 "true"
                                                                                                                                                                                             ],
@@ -610,7 +610,7 @@
                                                                                                                                                                                     "name": "atom",
                                                                                                                                                                                     "value": [
                                                                                                                                                                                         {
-                                                                                                                                                                                            "name": "const",
+                                                                                                                                                                                            "name": "symbol",
                                                                                                                                                                                             "value": [
                                                                                                                                                                                                 "true"
                                                                                                                                                                                             ],

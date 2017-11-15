@@ -113,7 +113,7 @@ expression[
                                                                                 atomExpr[
                                                                                     typing[
                                                                                         atom[
-                                                                                            const[
+                                                                                            symbol[
                                                                                                 "true"
                                                                                             ]
                                                                                         ]
@@ -147,7 +147,7 @@ expression[
                                                                                 atomExpr[
                                                                                     typing[
                                                                                         atom[
-                                                                                            const[
+                                                                                            symbol[
                                                                                                 "true"
                                                                                             ]
                                                                                         ]

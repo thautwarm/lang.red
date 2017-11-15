@@ -1,0 +1,705 @@
+{
+    "name": "expression",
+    "value": [
+        {
+            "name": "definition",
+            "value": [
+                {
+                    "name": "declaration",
+                    "value": [
+                        {
+                            "name": "symbol",
+                            "value": [
+                                "result"
+                            ],
+                            "meta": [
+                                0,
+                                0,
+                                "<input>"
+                            ]
+                        }
+                    ],
+                    "meta": [
+                        0,
+                        0,
+                        "<input>"
+                    ]
+                },
+                {
+                    "name": "expression",
+                    "value": [
+                        {
+                            "name": "dualOperation",
+                            "value": [
+                                {
+                                    "name": "unaryOperation",
+                                    "value": [
+                                        {
+                                            "name": "atomExpr",
+                                            "value": [
+                                                {
+                                                    "name": "typing",
+                                                    "value": [
+                                                        {
+                                                            "name": "atom",
+                                                            "value": [
+                                                                {
+                                                                    "name": "symbol",
+                                                                    "value": [
+                                                                        "if"
+                                                                    ],
+                                                                    "meta": [
+                                                                        0,
+                                                                        2,
+                                                                        "<input>"
+                                                                    ]
+                                                                }
+                                                            ],
+                                                            "meta": [
+                                                                0,
+                                                                2,
+                                                                "<input>"
+                                                            ]
+                                                        }
+                                                    ],
+                                                    "meta": [
+                                                        0,
+                                                        2,
+                                                        "<input>"
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "trailer",
+                                                    "value": [
+                                                        "(",
+                                                        {
+                                                            "name": "expression",
+                                                            "value": [
+                                                                {
+                                                                    "name": "dualOperation",
+                                                                    "value": [
+                                                                        {
+                                                                            "name": "unaryOperation",
+                                                                            "value": [
+                                                                                {
+                                                                                    "name": "atomExpr",
+                                                                                    "value": [
+                                                                                        {
+                                                                                            "name": "typing",
+                                                                                            "value": [
+                                                                                                {
+                                                                                                    "name": "atom",
+                                                                                                    "value": [
+                                                                                                        {
+                                                                                                            "name": "decimal",
+                                                                                                            "value": [
+                                                                                                                "1"
+                                                                                                            ],
+                                                                                                            "meta": [
+                                                                                                                0,
+                                                                                                                4,
+                                                                                                                "<input>"
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ],
+                                                                                                    "meta": [
+                                                                                                        0,
+                                                                                                        4,
+                                                                                                        "<input>"
+                                                                                                    ]
+                                                                                                }
+                                                                                            ],
+                                                                                            "meta": [
+                                                                                                0,
+                                                                                                4,
+                                                                                                "<input>"
+                                                                                            ]
+                                                                                        }
+                                                                                    ],
+                                                                                    "meta": [
+                                                                                        0,
+                                                                                        4,
+                                                                                        "<input>"
+                                                                                    ]
+                                                                                }
+                                                                            ],
+                                                                            "meta": [
+                                                                                0,
+                                                                                4,
+                                                                                "<input>"
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "name": "dualOperator",
+                                                                            "value": [
+                                                                                "+"
+                                                                            ],
+                                                                            "meta": [
+                                                                                0,
+                                                                                5,
+                                                                                "<input>"
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "name": "unaryOperation",
+                                                                            "value": [
+                                                                                {
+                                                                                    "name": "atomExpr",
+                                                                                    "value": [
+                                                                                        {
+                                                                                            "name": "typing",
+                                                                                            "value": [
+                                                                                                {
+                                                                                                    "name": "atom",
+                                                                                                    "value": [
+                                                                                                        {
+                                                                                                            "name": "decimal",
+                                                                                                            "value": [
+                                                                                                                "2"
+                                                                                                            ],
+                                                                                                            "meta": [
+                                                                                                                0,
+                                                                                                                6,
+                                                                                                                "<input>"
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ],
+                                                                                                    "meta": [
+                                                                                                        0,
+                                                                                                        6,
+                                                                                                        "<input>"
+                                                                                                    ]
+                                                                                                }
+                                                                                            ],
+                                                                                            "meta": [
+                                                                                                0,
+                                                                                                6,
+                                                                                                "<input>"
+                                                                                            ]
+                                                                                        }
+                                                                                    ],
+                                                                                    "meta": [
+                                                                                        0,
+                                                                                        6,
+                                                                                        "<input>"
+                                                                                    ]
+                                                                                }
+                                                                            ],
+                                                                            "meta": [
+                                                                                0,
+                                                                                6,
+                                                                                "<input>"
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "name": "dualOperator",
+                                                                            "value": [
+                                                                                "=="
+                                                                            ],
+                                                                            "meta": [
+                                                                                0,
+                                                                                7,
+                                                                                "<input>"
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "name": "unaryOperation",
+                                                                            "value": [
+                                                                                {
+                                                                                    "name": "atomExpr",
+                                                                                    "value": [
+                                                                                        {
+                                                                                            "name": "typing",
+                                                                                            "value": [
+                                                                                                {
+                                                                                                    "name": "atom",
+                                                                                                    "value": [
+                                                                                                        {
+                                                                                                            "name": "decimal",
+                                                                                                            "value": [
+                                                                                                                "5"
+                                                                                                            ],
+                                                                                                            "meta": [
+                                                                                                                0,
+                                                                                                                8,
+                                                                                                                "<input>"
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ],
+                                                                                                    "meta": [
+                                                                                                        0,
+                                                                                                        8,
+                                                                                                        "<input>"
+                                                                                                    ]
+                                                                                                }
+                                                                                            ],
+                                                                                            "meta": [
+                                                                                                0,
+                                                                                                8,
+                                                                                                "<input>"
+                                                                                            ]
+                                                                                        }
+                                                                                    ],
+                                                                                    "meta": [
+                                                                                        0,
+                                                                                        8,
+                                                                                        "<input>"
+                                                                                    ]
+                                                                                }
+                                                                            ],
+                                                                            "meta": [
+                                                                                0,
+                                                                                8,
+                                                                                "<input>"
+                                                                            ]
+                                                                        }
+                                                                    ],
+                                                                    "meta": [
+                                                                        0,
+                                                                        4,
+                                                                        "<input>"
+                                                                    ]
+                                                                }
+                                                            ],
+                                                            "meta": [
+                                                                0,
+                                                                4,
+                                                                "<input>"
+                                                            ]
+                                                        },
+                                                        ")"
+                                                    ],
+                                                    "meta": [
+                                                        0,
+                                                        3,
+                                                        "<input>"
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "trailer",
+                                                    "value": [
+                                                        "(",
+                                                        {
+                                                            "name": "expression",
+                                                            "value": [
+                                                                {
+                                                                    "name": "dualOperation",
+                                                                    "value": [
+                                                                        {
+                                                                            "name": "unaryOperation",
+                                                                            "value": [
+                                                                                {
+                                                                                    "name": "atomExpr",
+                                                                                    "value": [
+                                                                                        {
+                                                                                            "name": "typing",
+                                                                                            "value": [
+                                                                                                {
+                                                                                                    "name": "atom",
+                                                                                                    "value": [
+                                                                                                        {
+                                                                                                            "name": "linkedList",
+                                                                                                            "value": [
+                                                                                                                "[",
+                                                                                                                {
+                                                                                                                    "name": "arguments",
+                                                                                                                    "value": [
+                                                                                                                        {
+                                                                                                                            "name": "argument",
+                                                                                                                            "value": [
+                                                                                                                                {
+                                                                                                                                    "name": "expression",
+                                                                                                                                    "value": [
+                                                                                                                                        {
+                                                                                                                                            "name": "dualOperation",
+                                                                                                                                            "value": [
+                                                                                                                                                {
+                                                                                                                                                    "name": "unaryOperation",
+                                                                                                                                                    "value": [
+                                                                                                                                                        {
+                                                                                                                                                            "name": "atomExpr",
+                                                                                                                                                            "value": [
+                                                                                                                                                                {
+                                                                                                                                                                    "name": "typing",
+                                                                                                                                                                    "value": [
+                                                                                                                                                                        {
+                                                                                                                                                                            "name": "atom",
+                                                                                                                                                                            "value": [
+                                                                                                                                                                                {
+                                                                                                                                                                                    "name": "symbol",
+                                                                                                                                                                                    "value": [
+                                                                                                                                                                                        "a2"
+                                                                                                                                                                                    ],
+                                                                                                                                                                                    "meta": [
+                                                                                                                                                                                        0,
+                                                                                                                                                                                        12,
+                                                                                                                                                                                        "<input>"
+                                                                                                                                                                                    ]
+                                                                                                                                                                                }
+                                                                                                                                                                            ],
+                                                                                                                                                                            "meta": [
+                                                                                                                                                                                0,
+                                                                                                                                                                                12,
+                                                                                                                                                                                "<input>"
+                                                                                                                                                                            ]
+                                                                                                                                                                        }
+                                                                                                                                                                    ],
+                                                                                                                                                                    "meta": [
+                                                                                                                                                                        0,
+                                                                                                                                                                        12,
+                                                                                                                                                                        "<input>"
+                                                                                                                                                                    ]
+                                                                                                                                                                }
+                                                                                                                                                            ],
+                                                                                                                                                            "meta": [
+                                                                                                                                                                0,
+                                                                                                                                                                12,
+                                                                                                                                                                "<input>"
+                                                                                                                                                            ]
+                                                                                                                                                        }
+                                                                                                                                                    ],
+                                                                                                                                                    "meta": [
+                                                                                                                                                        0,
+                                                                                                                                                        12,
+                                                                                                                                                        "<input>"
+                                                                                                                                                    ]
+                                                                                                                                                }
+                                                                                                                                            ],
+                                                                                                                                            "meta": [
+                                                                                                                                                0,
+                                                                                                                                                12,
+                                                                                                                                                "<input>"
+                                                                                                                                            ]
+                                                                                                                                        }
+                                                                                                                                    ],
+                                                                                                                                    "meta": [
+                                                                                                                                        0,
+                                                                                                                                        12,
+                                                                                                                                        "<input>"
+                                                                                                                                    ]
+                                                                                                                                }
+                                                                                                                            ],
+                                                                                                                            "meta": [
+                                                                                                                                0,
+                                                                                                                                12,
+                                                                                                                                "<input>"
+                                                                                                                            ]
+                                                                                                                        }
+                                                                                                                    ],
+                                                                                                                    "meta": [
+                                                                                                                        0,
+                                                                                                                        12,
+                                                                                                                        "<input>"
+                                                                                                                    ]
+                                                                                                                },
+                                                                                                                "::",
+                                                                                                                {
+                                                                                                                    "name": "symbol",
+                                                                                                                    "value": [
+                                                                                                                        "tail"
+                                                                                                                    ],
+                                                                                                                    "meta": [
+                                                                                                                        0,
+                                                                                                                        14,
+                                                                                                                        "<input>"
+                                                                                                                    ]
+                                                                                                                },
+                                                                                                                "]"
+                                                                                                            ],
+                                                                                                            "meta": [
+                                                                                                                0,
+                                                                                                                11,
+                                                                                                                "<input>"
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ],
+                                                                                                    "meta": [
+                                                                                                        0,
+                                                                                                        11,
+                                                                                                        "<input>"
+                                                                                                    ]
+                                                                                                }
+                                                                                            ],
+                                                                                            "meta": [
+                                                                                                0,
+                                                                                                11,
+                                                                                                "<input>"
+                                                                                            ]
+                                                                                        }
+                                                                                    ],
+                                                                                    "meta": [
+                                                                                        0,
+                                                                                        11,
+                                                                                        "<input>"
+                                                                                    ]
+                                                                                }
+                                                                            ],
+                                                                            "meta": [
+                                                                                0,
+                                                                                11,
+                                                                                "<input>"
+                                                                            ]
+                                                                        }
+                                                                    ],
+                                                                    "meta": [
+                                                                        0,
+                                                                        11,
+                                                                        "<input>"
+                                                                    ]
+                                                                }
+                                                            ],
+                                                            "meta": [
+                                                                0,
+                                                                11,
+                                                                "<input>"
+                                                            ]
+                                                        },
+                                                        ")"
+                                                    ],
+                                                    "meta": [
+                                                        0,
+                                                        10,
+                                                        "<input>"
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "trailer",
+                                                    "value": [
+                                                        "(",
+                                                        {
+                                                            "name": "expression",
+                                                            "value": [
+                                                                {
+                                                                    "name": "dualOperation",
+                                                                    "value": [
+                                                                        {
+                                                                            "name": "unaryOperation",
+                                                                            "value": [
+                                                                                {
+                                                                                    "name": "atomExpr",
+                                                                                    "value": [
+                                                                                        {
+                                                                                            "name": "typing",
+                                                                                            "value": [
+                                                                                                {
+                                                                                                    "name": "atom",
+                                                                                                    "value": [
+                                                                                                        {
+                                                                                                            "name": "string",
+                                                                                                            "value": [
+                                                                                                                "\"",
+                                                                                                                "fafafa",
+                                                                                                                "\""
+                                                                                                            ],
+                                                                                                            "meta": [
+                                                                                                                0,
+                                                                                                                18,
+                                                                                                                "<input>"
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ],
+                                                                                                    "meta": [
+                                                                                                        0,
+                                                                                                        18,
+                                                                                                        "<input>"
+                                                                                                    ]
+                                                                                                }
+                                                                                            ],
+                                                                                            "meta": [
+                                                                                                0,
+                                                                                                18,
+                                                                                                "<input>"
+                                                                                            ]
+                                                                                        }
+                                                                                    ],
+                                                                                    "meta": [
+                                                                                        0,
+                                                                                        18,
+                                                                                        "<input>"
+                                                                                    ]
+                                                                                }
+                                                                            ],
+                                                                            "meta": [
+                                                                                0,
+                                                                                18,
+                                                                                "<input>"
+                                                                            ]
+                                                                        }
+                                                                    ],
+                                                                    "meta": [
+                                                                        0,
+                                                                        18,
+                                                                        "<input>"
+                                                                    ]
+                                                                }
+                                                            ],
+                                                            "meta": [
+                                                                0,
+                                                                18,
+                                                                "<input>"
+                                                            ]
+                                                        },
+                                                        ")"
+                                                    ],
+                                                    "meta": [
+                                                        0,
+                                                        17,
+                                                        "<input>"
+                                                    ]
+                                                }
+                                            ],
+                                            "meta": [
+                                                0,
+                                                2,
+                                                "<input>"
+                                            ]
+                                        }
+                                    ],
+                                    "meta": [
+                                        0,
+                                        2,
+                                        "<input>"
+                                    ]
+                                }
+                            ],
+                            "meta": [
+                                0,
+                                2,
+                                "<input>"
+                            ]
+                        }
+                    ],
+                    "meta": [
+                        0,
+                        2,
+                        "<input>"
+                    ]
+                }
+            ],
+            "meta": [
+                0,
+                0,
+                "<input>"
+            ]
+        },
+        "\n",
+        {
+            "name": "whereSyntax",
+            "value": [
+                "where",
+                {
+                    "name": "definition",
+                    "value": [
+                        {
+                            "name": "declaration",
+                            "value": [
+                                {
+                                    "name": "symbol",
+                                    "value": [
+                                        "a2"
+                                    ],
+                                    "meta": [
+                                        1,
+                                        24,
+                                        "<input>"
+                                    ]
+                                }
+                            ],
+                            "meta": [
+                                1,
+                                24,
+                                "<input>"
+                            ]
+                        },
+                        {
+                            "name": "expression",
+                            "value": [
+                                {
+                                    "name": "dualOperation",
+                                    "value": [
+                                        {
+                                            "name": "unaryOperation",
+                                            "value": [
+                                                {
+                                                    "name": "atomExpr",
+                                                    "value": [
+                                                        {
+                                                            "name": "typing",
+                                                            "value": [
+                                                                {
+                                                                    "name": "atom",
+                                                                    "value": [
+                                                                        {
+                                                                            "name": "decimal",
+                                                                            "value": [
+                                                                                "10"
+                                                                            ],
+                                                                            "meta": [
+                                                                                1,
+                                                                                26,
+                                                                                "<input>"
+                                                                            ]
+                                                                        }
+                                                                    ],
+                                                                    "meta": [
+                                                                        1,
+                                                                        26,
+                                                                        "<input>"
+                                                                    ]
+                                                                }
+                                                            ],
+                                                            "meta": [
+                                                                1,
+                                                                26,
+                                                                "<input>"
+                                                            ]
+                                                        }
+                                                    ],
+                                                    "meta": [
+                                                        1,
+                                                        26,
+                                                        "<input>"
+                                                    ]
+                                                }
+                                            ],
+                                            "meta": [
+                                                1,
+                                                26,
+                                                "<input>"
+                                            ]
+                                        }
+                                    ],
+                                    "meta": [
+                                        1,
+                                        26,
+                                        "<input>"
+                                    ]
+                                }
+                            ],
+                            "meta": [
+                                1,
+                                26,
+                                "<input>"
+                            ]
+                        }
+                    ],
+                    "meta": [
+                        1,
+                        24,
+                        "<input>"
+                    ]
+                }
+            ],
+            "meta": [
+                1,
+                23,
+                "<input>"
+            ]
+        }
+    ],
+    "meta": [
+        0,
+        0,
+        "<input>"
+    ]
+}

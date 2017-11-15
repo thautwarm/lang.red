@@ -73,7 +73,7 @@ unaryOperation
     ::= unaryHeadOperator* atomExpr [unaryLastOperator];
 
 lambdef 
-    ::= '(' [arguments] ')' '=>' expression;
+    ::= '(' [arguments] ')' '=>' newline* expression;
 
 atomExpr 
     ::= lambdef | typing trailer* ;
@@ -86,7 +86,7 @@ decimal
     ::=  number ['.' number] ['E' ['-'] number] ;
 
 const  
-    ::= 'null' | 'false' | 'true';
+    ::= 'None' | 'False' | 'True';
 
 anyChar := R'[^"]+';
 
@@ -103,7 +103,11 @@ atom
          string  |
          symbol  |
          body    |
-         '(' expression ')';
+         '(' expression ')'|
+         linkedList;
+
+linkedList 
+    ::= '[' arguments ['::' symbol ] ']' | '[' [expression 'where'] expression 'from' expression (',' expression)* ']' ;
     
 typedef ::= '(' typedef ')' |
             typedef '->' typedef |

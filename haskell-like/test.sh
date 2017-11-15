@@ -25,6 +25,11 @@ python ./testLang.py expression '''if (test)(`and_then)(`else) =
                                         when test then and_then
                                         otherwise then else''' -o tested/if_expr
 
-python ./testLang.py expression '''result = if (1+2 == 5) (a2)("fafafa")
-                                        where a2 = 10''' -o tested/demo
+python ./testLang.py expression '''result = if (1+2 == 5) ([a2::tail])("fafafa")
+                                        where a2 = 10''' -o tested/where_syntax
                                         # where 子句用于定义之后。
+
+
+python ./testLang.py expression "[a+1 where [a,b] from [[1,2], [2,3], [3,4]], a + b >= 5]" -o tested/list_comprehension
+
+                                        

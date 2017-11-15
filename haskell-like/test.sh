@@ -12,7 +12,7 @@ python ./testLang.py expression """f(1.0)(x)(y)={
 
 
 
-python ./testLang.py expression """f(x)(~head|tail)(y) = 
+python ./testLang.py expression """f(x)(~head::tail)(y) = 
                                         when head > x(y) then {
                                             x + y 
                                             }

@@ -1,6 +1,6 @@
 ## 学习语言设计中
 
-[像做得像Hasekell结果一点也不想Haskell的语言](https://github.com/thautwarm/lang.red/tree/master/haskell-like)
+[想做得像Hasekell结果一点也不想Haskell的语言](https://github.com/thautwarm/lang.red/tree/master/haskell-like)
 ```
 c = "license"
 f(head::tail)([a, b, ~c])

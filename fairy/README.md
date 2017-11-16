@@ -1,4 +1,4 @@
-并不是很像HS.
+一定也不像HS了...
 
 ## Requirement 
 - [EBNFParser >= 1.0.1](https://github.com/thautwarm/EBNFParser)  

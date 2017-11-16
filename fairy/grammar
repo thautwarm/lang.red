@@ -19,8 +19,8 @@ argument
 arguments 
         ::=  argument (',' argument)*;
 
-declaration 
-        ::= symbol ( '(' [argument] ')' )* [':' typedef];
+declaration Throw ['(', ')', ':']
+        ::= symbol ( '(' [arguments] ')' )* [':' typedef];
 
 definition Throw ['\n', '='] 
     ::= declaration '=' newline* expression;
@@ -72,7 +72,7 @@ unaryLastOperator
 unaryOperation 
     ::= unaryHeadOperator* atomExpr [unaryLastOperator];
 
-lambdef 
+lambdef Throw ['(', ')', '=>']
     ::= '(' [arguments] ')' '=>' newline* expression;
 
 atomExpr 
@@ -111,7 +111,7 @@ linkedList
     
 typedef ::= '(' typedef ')' |
             typedef '->' typedef |
-            symbol;
+            symbol ['[' typedef ']'];
 
 
 

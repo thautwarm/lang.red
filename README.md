@@ -1,6 +1,6 @@
 ## 学习语言设计中
 
-[Fairy: 想做得像Hasekell结果却一点也不像的语言](https://github.com/thautwarm/lang.red/tree/master/haskell-like)  
+[Fairy: 想做得像Hasekell结果却一点也不像的语言](https://github.com/thautwarm/lang.red/tree/master/fairy)  
 ```
 c = "license"
 f(head::tail)([a, b, ~c])
@@ -13,8 +13,8 @@ g(a:int, 1)(b:int, 2)(c:int, 3):int =
     where summary = a+b+c
 ```
 
-- [文法](https://github.com/thautwarm/lang.red/blob/master/haskell-like/grammar)
+- [文法](https://github.com/thautwarm/lang.red/tree/master/fairy/grammar)
 
-- [测试Script](https://github.com/thautwarm/lang.red/blob/master/haskell-like/test.hs)以及[测试结果文件集](https://github.com/thautwarm/lang.red/tree/master/haskell-like/tested)
+- [测试Script](https://github.com/thautwarm/lang.red/tree/master/fairy/test.hs)以及[测试结果文件集](https://github.com/thautwarm/lang.red/tree/master/fairy/tested)
 
 

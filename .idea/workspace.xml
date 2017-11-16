@@ -2,43 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3f80aa1-fb6e-4f67-921a-a7363258acbd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fairy/fairy/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fairy/fairy/compiler/Error.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fairy/fairy/compiler/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fairy/fairy/compiler/adt.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fairy/fairy/compiler/compile.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fairy/fairy/compiler/parser.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fairy/fairy/compiler/symtable.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fairy/fairy/compiler/token.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/haskell-like/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/haskell-like/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/haskell-like/demo2.hs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/haskell-like/grammar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/haskell-like/test.hs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/haskell-like/test.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/haskell-like/tested/bool_and_null_query" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/haskell-like/tested/bool_and_null_query.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/haskell-like/tested/demo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/haskell-like/tested/demo.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/haskell-like/tested/dual_operation" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/haskell-like/tested/dual_operation.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/haskell-like/tested/guard" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/haskell-like/tested/guard.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/haskell-like/tested/if_expr" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/haskell-like/tested/if_expr.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/haskell-like/tested/lambda" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/haskell-like/tested/lambda.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/haskell-like/tested/left_recur_typedef" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/haskell-like/tested/left_recur_typedef.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/haskell-like/tested/list_comprehension" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/haskell-like/tested/list_comprehension.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/haskell-like/tested/pattern_matching" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/haskell-like/tested/pattern_matching.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/haskell-like/tested/where_syntax" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/haskell-like/tested/where_syntax.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/haskell-like/token" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/haskell-like/token.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/misakawa.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fairy/fairy/compiler/asdl.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/fairy/fairy/compiler/adt.py" afterPath="$PROJECT_DIR$/fairy/fairy/compiler/ast.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fairy/README.md" afterPath="$PROJECT_DIR$/fairy/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fairy/grammar" afterPath="$PROJECT_DIR$/fairy/grammar" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -78,21 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="symtable.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fairy/fairy/compiler/symtable.py">
+      <file leaf-file-name="asdl.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fairy/fairy/compiler/asdl.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="736">
-              <caret line="32" column="34" lean-forward="true" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="adt.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/fairy/fairy/compiler/adt.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="54" column="43" lean-forward="true" selection-start-line="54" selection-start-column="43" selection-end-line="54" selection-end-column="43" />
+            <state relative-caret-position="485">
+              <caret line="172" column="12" lean-forward="true" selection-start-line="172" selection-start-column="12" selection-end-line="172" selection-end-column="12" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -100,12 +59,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ASTDef.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/miniconda3/lib/python3.6/site-packages/Ruikowa/ObjectRegex/ASTDef.py">
+      <file leaf-file-name="ast.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fairy/fairy/compiler/ast.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-67">
-              <caret line="25" column="19" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="19" />
-              <folding />
+            <state relative-caret-position="-780">
+              <caret line="16" column="48" lean-forward="true" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -113,8 +74,8 @@
       <file leaf-file-name="grammar" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fairy/grammar">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="74" column="28" lean-forward="false" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
+            <state relative-caret-position="2599">
+              <caret line="113" column="18" lean-forward="false" selection-start-line="113" selection-start-column="12" selection-end-line="113" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -164,8 +125,9 @@
         <option value="$PROJECT_DIR$/fairy/fairy/compiler/compile.py" />
         <option value="$PROJECT_DIR$/fairy/fairy/compiler/Error.py" />
         <option value="$PROJECT_DIR$/fairy/fairy/compiler/symtable.py" />
-        <option value="$PROJECT_DIR$/fairy/grammar" />
         <option value="$PROJECT_DIR$/fairy/fairy/compiler/adt.py" />
+        <option value="$PROJECT_DIR$/fairy/grammar" />
+        <option value="$PROJECT_DIR$/fairy/fairy/compiler/asdl.py" />
       </list>
     </option>
   </component>
@@ -490,10 +452,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/miniconda3/lib/python3.6/site-packages/Ruikowa/ObjectRegex/ASTDef.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-67">
+          <caret line="25" column="19" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/fairy/fairy/compiler/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fairy/fairy/compiler/symtable.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -508,34 +486,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/miniconda3/lib/python3.6/site-packages/Ruikowa/ObjectRegex/ASTDef.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-67">
-          <caret line="25" column="19" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fairy/fairy/compiler/symtable.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="32" column="34" lean-forward="true" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fairy/grammar">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="74" column="28" lean-forward="false" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
+        <state relative-caret-position="2599">
+          <caret line="113" column="18" lean-forward="false" selection-start-line="113" selection-start-column="12" selection-end-line="113" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fairy/fairy/compiler/adt.py">
+    <entry file="file://$PROJECT_DIR$/fairy/fairy/compiler/asdl.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="54" column="43" lean-forward="true" selection-start-line="54" selection-start-column="43" selection-end-line="54" selection-end-column="43" />
+        <state relative-caret-position="485">
+          <caret line="172" column="12" lean-forward="true" selection-start-line="172" selection-start-column="12" selection-end-line="172" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fairy/fairy/compiler/ast.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-780">
+          <caret line="16" column="48" lean-forward="true" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>

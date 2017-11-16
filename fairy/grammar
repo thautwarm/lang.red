@@ -29,11 +29,11 @@ body Throw ['\n']
     ::= '{'  (newline* expression)* newline* '}';
 # a = { ... } 
 
-branch 
+branch Throw ['when', 'then']
     ::= 'when' expression 'then' expression;
 
 
-endOfBranch  # guard-like(god-like?emmmm....
+endOfBranch Throw ['otherwise', 'then']  # guard-like(god-like?emmmm....
     ::= 'otherwise' 'then' expression;
 
 guard Throw ['\n'] 
@@ -45,7 +45,7 @@ guard Throw ['\n']
 whereSyntax
     ::= 'where' (body | definition);
 
-expression 
+expression Throw ['\n']
     ::= guard | definition [newline* whereSyntax]| dualOperation | macro;
 
 macro
@@ -93,7 +93,7 @@ anyChar := R'[^"]+';
 string 
     ::= '"' ('\\' '"'| anyChar)* '"';
 
-typing 
+typing Throw [':']
     ::= atom [':' typedef] ;
 
 atom 
@@ -106,11 +106,11 @@ atom
          '(' expression ')'|
          linkedList;
 
-linkedList 
-    ::= '[' arguments ['::' symbol ] ']' | '[' [expression 'where'] expression 'from' expression (',' expression)* ']' ;
-    
-typedef ::= '(' typedef ')' |
-            typedef '->' typedef |
+linkedList Throw ['[', ']', ',', '::', 'where', 'from']
+    ::= '[' arguments ['::' expression ] ']' | '[' expression 'where' expression 'from' expression (',' expression)* ']' ;
+
+
+typedef ::= typedef '->' typedef |
             symbol ['[' typedef ']'];
 
 

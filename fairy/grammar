@@ -110,7 +110,8 @@ linkedList Throw ['[', ']', ',', '::', 'where', 'from']
     ::= '[' arguments ['::' expression ] ']' | '[' expression 'where' expression 'from' expression (',' expression)* ']' ;
 
 
-typedef ::= typedef '->' typedef |
+typedef Throw ['->', '[', ']']
+        ::= typedef '->' typedef |
             symbol ['[' typedef ']'];
 
 

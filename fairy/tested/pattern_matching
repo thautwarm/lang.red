@@ -4,18 +4,19 @@ expression[
             symbol[
                 "f"
             ]
-            "("
-            argument[
-                expression[
-                    dualOperation[
-                        unaryOperation[
-                            atomExpr[
-                                typing[
-                                    atom[
-                                        decimal[
-                                            "1"
-                                            "."
-                                            "0"
+            arguments[
+                argument[
+                    expression[
+                        dualOperation[
+                            unaryOperation[
+                                atomExpr[
+                                    typing[
+                                        atom[
+                                            decimal[
+                                                "1"
+                                                "."
+                                                "0"
+                                            ]
                                         ]
                                     ]
                                 ]
@@ -24,17 +25,17 @@ expression[
                     ]
                 ]
             ]
-            ")"
-            "("
-            argument[
-                expression[
-                    dualOperation[
-                        unaryOperation[
-                            atomExpr[
-                                typing[
-                                    atom[
-                                        symbol[
-                                            "x"
+            arguments[
+                argument[
+                    expression[
+                        dualOperation[
+                            unaryOperation[
+                                atomExpr[
+                                    typing[
+                                        atom[
+                                            symbol[
+                                                "x"
+                                            ]
                                         ]
                                     ]
                                 ]
@@ -43,17 +44,17 @@ expression[
                     ]
                 ]
             ]
-            ")"
-            "("
-            argument[
-                expression[
-                    dualOperation[
-                        unaryOperation[
-                            atomExpr[
-                                typing[
-                                    atom[
-                                        symbol[
-                                            "y"
+            arguments[
+                argument[
+                    expression[
+                        dualOperation[
+                            unaryOperation[
+                                atomExpr[
+                                    typing[
+                                        atom[
+                                            symbol[
+                                                "y"
+                                            ]
                                         ]
                                     ]
                                 ]
@@ -62,7 +63,6 @@ expression[
                     ]
                 ]
             ]
-            ")"
         ]
         expression[
             dualOperation[

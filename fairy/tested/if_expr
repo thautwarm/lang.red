@@ -4,78 +4,8 @@ expression[
             symbol[
                 "if"
             ]
-            "("
-            argument[
-                expression[
-                    dualOperation[
-                        unaryOperation[
-                            atomExpr[
-                                typing[
-                                    atom[
-                                        symbol[
-                                            "test"
-                                        ]
-                                    ]
-                                ]
-                            ]
-                        ]
-                    ]
-                ]
-            ]
-            ")"
-            "("
-            argument[
-                expression[
-                    macro[
-                        "`"
-                        expression[
-                            dualOperation[
-                                unaryOperation[
-                                    atomExpr[
-                                        typing[
-                                            atom[
-                                                symbol[
-                                                    "and_then"
-                                                ]
-                                            ]
-                                        ]
-                                    ]
-                                ]
-                            ]
-                        ]
-                    ]
-                ]
-            ]
-            ")"
-            "("
-            argument[
-                expression[
-                    macro[
-                        "`"
-                        expression[
-                            dualOperation[
-                                unaryOperation[
-                                    atomExpr[
-                                        typing[
-                                            atom[
-                                                symbol[
-                                                    "else"
-                                                ]
-                                            ]
-                                        ]
-                                    ]
-                                ]
-                            ]
-                        ]
-                    ]
-                ]
-            ]
-            ")"
-        ]
-        expression[
-            guard[
-                branch[
-                    "when"
+            arguments[
+                argument[
                     expression[
                         dualOperation[
                             unaryOperation[
@@ -91,7 +21,75 @@ expression[
                             ]
                         ]
                     ]
-                    "then"
+                ]
+            ]
+            arguments[
+                argument[
+                    expression[
+                        macro[
+                            "`"
+                            expression[
+                                dualOperation[
+                                    unaryOperation[
+                                        atomExpr[
+                                            typing[
+                                                atom[
+                                                    symbol[
+                                                        "and_then"
+                                                    ]
+                                                ]
+                                            ]
+                                        ]
+                                    ]
+                                ]
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+            arguments[
+                argument[
+                    expression[
+                        macro[
+                            "`"
+                            expression[
+                                dualOperation[
+                                    unaryOperation[
+                                        atomExpr[
+                                            typing[
+                                                atom[
+                                                    symbol[
+                                                        "else"
+                                                    ]
+                                                ]
+                                            ]
+                                        ]
+                                    ]
+                                ]
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+        ]
+        expression[
+            guard[
+                branch[
+                    expression[
+                        dualOperation[
+                            unaryOperation[
+                                atomExpr[
+                                    typing[
+                                        atom[
+                                            symbol[
+                                                "test"
+                                            ]
+                                        ]
+                                    ]
+                                ]
+                            ]
+                        ]
+                    ]
                     expression[
                         dualOperation[
                             unaryOperation[
@@ -109,8 +107,6 @@ expression[
                     ]
                 ]
                 endOfBranch[
-                    "otherwise"
-                    "then"
                     expression[
                         dualOperation[
                             unaryOperation[

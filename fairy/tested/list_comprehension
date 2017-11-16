@@ -5,7 +5,6 @@ expression[
                 typing[
                     atom[
                         linkedList[
-                            "["
                             expression[
                                 dualOperation[
                                     unaryOperation[
@@ -35,7 +34,6 @@ expression[
                                     ]
                                 ]
                             ]
-                            "where"
                             expression[
                                 dualOperation[
                                     unaryOperation[
@@ -43,7 +41,6 @@ expression[
                                             typing[
                                                 atom[
                                                     linkedList[
-                                                        "["
                                                         arguments[
                                                             argument[
                                                                 expression[
@@ -81,7 +78,6 @@ expression[
                                                                 ]
                                                             ]
                                                         ]
-                                                        "]"
                                                     ]
                                                 ]
                                             ]
@@ -89,7 +85,6 @@ expression[
                                     ]
                                 ]
                             ]
-                            "from"
                             expression[
                                 dualOperation[
                                     unaryOperation[
@@ -97,7 +92,6 @@ expression[
                                             typing[
                                                 atom[
                                                     linkedList[
-                                                        "["
                                                         arguments[
                                                             argument[
                                                                 expression[
@@ -107,7 +101,6 @@ expression[
                                                                                 typing[
                                                                                     atom[
                                                                                         linkedList[
-                                                                                            "["
                                                                                             arguments[
                                                                                                 argument[
                                                                                                     expression[
@@ -145,7 +138,6 @@ expression[
                                                                                                     ]
                                                                                                 ]
                                                                                             ]
-                                                                                            "]"
                                                                                         ]
                                                                                     ]
                                                                                 ]
@@ -163,7 +155,6 @@ expression[
                                                                                 typing[
                                                                                     atom[
                                                                                         linkedList[
-                                                                                            "["
                                                                                             arguments[
                                                                                                 argument[
                                                                                                     expression[
@@ -201,7 +192,6 @@ expression[
                                                                                                     ]
                                                                                                 ]
                                                                                             ]
-                                                                                            "]"
                                                                                         ]
                                                                                     ]
                                                                                 ]
@@ -219,7 +209,6 @@ expression[
                                                                                 typing[
                                                                                     atom[
                                                                                         linkedList[
-                                                                                            "["
                                                                                             arguments[
                                                                                                 argument[
                                                                                                     expression[
@@ -257,7 +246,6 @@ expression[
                                                                                                     ]
                                                                                                 ]
                                                                                             ]
-                                                                                            "]"
                                                                                         ]
                                                                                     ]
                                                                                 ]
@@ -267,7 +255,6 @@ expression[
                                                                 ]
                                                             ]
                                                         ]
-                                                        "]"
                                                     ]
                                                 ]
                                             ]
@@ -275,7 +262,6 @@ expression[
                                     ]
                                 ]
                             ]
-                            ","
                             expression[
                                 dualOperation[
                                     unaryOperation[
@@ -319,7 +305,6 @@ expression[
                                     ]
                                 ]
                             ]
-                            "]"
                         ]
                     ]
                 ]

@@ -3,7 +3,6 @@ expression[
         unaryOperation[
             atomExpr[
                 lambdef[
-                    "("
                     arguments[
                         argument[
                             expression[
@@ -16,7 +15,6 @@ expression[
                                                         "b"
                                                     ]
                                                 ]
-                                                ":"
                                                 typedef[
                                                     typedef[
                                                         typedef[
@@ -45,8 +43,6 @@ expression[
                             ]
                         ]
                     ]
-                    ")"
-                    "=>"
                     expression[
                         dualOperation[
                             unaryOperation[

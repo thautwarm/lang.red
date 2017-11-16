@@ -4,16 +4,17 @@ expression[
             symbol[
                 "f"
             ]
-            "("
-            argument[
-                expression[
-                    dualOperation[
-                        unaryOperation[
-                            atomExpr[
-                                typing[
-                                    atom[
-                                        symbol[
-                                            "x"
+            arguments[
+                argument[
+                    expression[
+                        dualOperation[
+                            unaryOperation[
+                                atomExpr[
+                                    typing[
+                                        atom[
+                                            symbol[
+                                                "x"
+                                            ]
                                         ]
                                     ]
                                 ]
@@ -22,32 +23,51 @@ expression[
                     ]
                 ]
             ]
-            ")"
-            "("
-            argument[
-                expression[
-                    dualOperation[
-                        unaryOperation[
-                            atomExpr[
-                                typing[
-                                    atom[
-                                        symbol[
-                                            "~"
-                                            "head"
-                                        ]
-                                    ]
-                                ]
-                            ]
-                        ]
-                        dualOperator[
-                            "|"
-                        ]
-                        unaryOperation[
-                            atomExpr[
-                                typing[
-                                    atom[
-                                        symbol[
-                                            "tail"
+            arguments[
+                argument[
+                    expression[
+                        dualOperation[
+                            unaryOperation[
+                                atomExpr[
+                                    typing[
+                                        atom[
+                                            linkedList[
+                                                arguments[
+                                                    argument[
+                                                        expression[
+                                                            dualOperation[
+                                                                unaryOperation[
+                                                                    atomExpr[
+                                                                        typing[
+                                                                            atom[
+                                                                                symbol[
+                                                                                    "~"
+                                                                                    "head"
+                                                                                ]
+                                                                            ]
+                                                                        ]
+                                                                    ]
+                                                                ]
+                                                            ]
+                                                        ]
+                                                    ]
+                                                ]
+                                                expression[
+                                                    dualOperation[
+                                                        unaryOperation[
+                                                            atomExpr[
+                                                                typing[
+                                                                    atom[
+                                                                        symbol[
+                                                                            "tail"
+                                                                        ]
+                                                                    ]
+                                                                ]
+                                                            ]
+                                                        ]
+                                                    ]
+                                                ]
+                                            ]
                                         ]
                                     ]
                                 ]
@@ -56,17 +76,17 @@ expression[
                     ]
                 ]
             ]
-            ")"
-            "("
-            argument[
-                expression[
-                    dualOperation[
-                        unaryOperation[
-                            atomExpr[
-                                typing[
-                                    atom[
-                                        symbol[
-                                            "y"
+            arguments[
+                argument[
+                    expression[
+                        dualOperation[
+                            unaryOperation[
+                                atomExpr[
+                                    typing[
+                                        atom[
+                                            symbol[
+                                                "y"
+                                            ]
                                         ]
                                     ]
                                 ]
@@ -75,12 +95,10 @@ expression[
                     ]
                 ]
             ]
-            ")"
         ]
         expression[
             guard[
                 branch[
-                    "when"
                     expression[
                         dualOperation[
                             unaryOperation[
@@ -129,7 +147,6 @@ expression[
                             ]
                         ]
                     ]
-                    "then"
                     expression[
                         dualOperation[
                             unaryOperation[
@@ -177,7 +194,6 @@ expression[
                     ]
                 ]
                 branch[
-                    "when"
                     expression[
                         dualOperation[
                             unaryOperation[
@@ -207,7 +223,6 @@ expression[
                             ]
                         ]
                     ]
-                    "then"
                     expression[
                         dualOperation[
                             unaryOperation[
@@ -239,8 +254,6 @@ expression[
                     ]
                 ]
                 endOfBranch[
-                    "otherwise"
-                    "then"
                     expression[
                         dualOperation[
                             unaryOperation[

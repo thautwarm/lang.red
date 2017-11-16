@@ -13,7 +13,6 @@
                                 {
                                     "name": "lambdef",
                                     "value": [
-                                        "(",
                                         {
                                             "name": "arguments",
                                             "value": [
@@ -56,7 +55,6 @@
                                                                                                         "<input>"
                                                                                                     ]
                                                                                                 },
-                                                                                                ":",
                                                                                                 {
                                                                                                     "name": "typedef",
                                                                                                     "value": [
@@ -191,8 +189,6 @@
                                                 "<input>"
                                             ]
                                         },
-                                        ")",
-                                        "=>",
                                         {
                                             "name": "expression",
                                             "value": [

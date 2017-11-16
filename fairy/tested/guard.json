@@ -40,7 +40,6 @@
                                                 {
                                                     "name": "lambdef",
                                                     "value": [
-                                                        "(",
                                                         {
                                                             "name": "arguments",
                                                             "value": [
@@ -83,7 +82,6 @@
                                                                                                                         "<input>"
                                                                                                                     ]
                                                                                                                 },
-                                                                                                                ":",
                                                                                                                 {
                                                                                                                     "name": "typedef",
                                                                                                                     "value": [
@@ -186,8 +184,6 @@
                                                                 "<input>"
                                                             ]
                                                         },
-                                                        ")",
-                                                        "=>",
                                                         {
                                                             "name": "expression",
                                                             "value": [
@@ -219,7 +215,6 @@
                                                                                                                                 {
                                                                                                                                     "name": "branch",
                                                                                                                                     "value": [
-                                                                                                                                        "when",
                                                                                                                                         {
                                                                                                                                             "name": "expression",
                                                                                                                                             "value": [
@@ -436,7 +431,6 @@
                                                                                                                                                 "<input>"
                                                                                                                                             ]
                                                                                                                                         },
-                                                                                                                                        "then",
                                                                                                                                         {
                                                                                                                                             "name": "expression",
                                                                                                                                             "value": [
@@ -518,7 +512,6 @@
                                                                                                                                 {
                                                                                                                                     "name": "branch",
                                                                                                                                     "value": [
-                                                                                                                                        "when",
                                                                                                                                         {
                                                                                                                                             "name": "expression",
                                                                                                                                             "value": [
@@ -590,7 +583,6 @@
                                                                                                                                                 "<input>"
                                                                                                                                             ]
                                                                                                                                         },
-                                                                                                                                        "then",
                                                                                                                                         {
                                                                                                                                             "name": "expression",
                                                                                                                                             "value": [

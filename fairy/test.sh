@@ -5,14 +5,14 @@ python ./testLang.py expression "not 1? + not 2??"  -o tested/bool_and_null_quer
 python ./testLang.py expression """f = (x:int->int) =>{
                                             when x(2)==2 then true
                                             when otherwise then true
-                                            }""" -o tested/guard 
+                                            }""" -o tested/guard
+
 python ./testLang.py expression """f(1.0)(x)(y)={
                                             x(y) + 20
                                             }""" -o tested/pattern_matching
 
 
-
-python ./testLang.py expression """f(x)(~head::tail)(y) = 
+python ./testLang.py expression """f(x)([~head::tail])(y) =
                                         when head > x(y) then {
                                             x + y 
                                             }

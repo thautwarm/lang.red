@@ -10,7 +10,6 @@ expression[
                 unaryOperation[
                     atomExpr[
                         lambdef[
-                            "("
                             arguments[
                                 argument[
                                     expression[
@@ -23,7 +22,6 @@ expression[
                                                                 "x"
                                                             ]
                                                         ]
-                                                        ":"
                                                         typedef[
                                                             typedef[
                                                                 symbol[
@@ -44,8 +42,6 @@ expression[
                                     ]
                                 ]
                             ]
-                            ")"
-                            "=>"
                             expression[
                                 dualOperation[
                                     unaryOperation[
@@ -57,7 +53,6 @@ expression[
                                                         expression[
                                                             guard[
                                                                 branch[
-                                                                    "when"
                                                                     expression[
                                                                         dualOperation[
                                                                             unaryOperation[
@@ -106,7 +101,6 @@ expression[
                                                                             ]
                                                                         ]
                                                                     ]
-                                                                    "then"
                                                                     expression[
                                                                         dualOperation[
                                                                             unaryOperation[
@@ -124,7 +118,6 @@ expression[
                                                                     ]
                                                                 ]
                                                                 branch[
-                                                                    "when"
                                                                     expression[
                                                                         dualOperation[
                                                                             unaryOperation[
@@ -140,7 +133,6 @@ expression[
                                                                             ]
                                                                         ]
                                                                     ]
-                                                                    "then"
                                                                     expression[
                                                                         dualOperation[
                                                                             unaryOperation[

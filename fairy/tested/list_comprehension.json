@@ -19,7 +19,6 @@
                                                 {
                                                     "name": "linkedList",
                                                     "value": [
-                                                        "[",
                                                         {
                                                             "name": "expression",
                                                             "value": [
@@ -153,7 +152,6 @@
                                                                 "<input>"
                                                             ]
                                                         },
-                                                        "where",
                                                         {
                                                             "name": "expression",
                                                             "value": [
@@ -175,7 +173,6 @@
                                                                                                         {
                                                                                                             "name": "linkedList",
                                                                                                             "value": [
-                                                                                                                "[",
                                                                                                                 {
                                                                                                                     "name": "arguments",
                                                                                                                     "value": [
@@ -348,8 +345,7 @@
                                                                                                                         6,
                                                                                                                         "<input>"
                                                                                                                     ]
-                                                                                                                },
-                                                                                                                "]"
+                                                                                                                }
                                                                                                             ],
                                                                                                             "meta": [
                                                                                                                 0,
@@ -399,7 +395,6 @@
                                                                 "<input>"
                                                             ]
                                                         },
-                                                        "from",
                                                         {
                                                             "name": "expression",
                                                             "value": [
@@ -421,7 +416,6 @@
                                                                                                         {
                                                                                                             "name": "linkedList",
                                                                                                             "value": [
-                                                                                                                "[",
                                                                                                                 {
                                                                                                                     "name": "arguments",
                                                                                                                     "value": [
@@ -449,7 +443,6 @@
                                                                                                                                                                                 {
                                                                                                                                                                                     "name": "linkedList",
                                                                                                                                                                                     "value": [
-                                                                                                                                                                                        "[",
                                                                                                                                                                                         {
                                                                                                                                                                                             "name": "arguments",
                                                                                                                                                                                             "value": [
@@ -622,8 +615,7 @@
                                                                                                                                                                                                 13,
                                                                                                                                                                                                 "<input>"
                                                                                                                                                                                             ]
-                                                                                                                                                                                        },
-                                                                                                                                                                                        "]"
+                                                                                                                                                                                        }
                                                                                                                                                                                     ],
                                                                                                                                                                                     "meta": [
                                                                                                                                                                                         0,
@@ -705,7 +697,6 @@
                                                                                                                                                                                 {
                                                                                                                                                                                     "name": "linkedList",
                                                                                                                                                                                     "value": [
-                                                                                                                                                                                        "[",
                                                                                                                                                                                         {
                                                                                                                                                                                             "name": "arguments",
                                                                                                                                                                                             "value": [
@@ -878,8 +869,7 @@
                                                                                                                                                                                                 19,
                                                                                                                                                                                                 "<input>"
                                                                                                                                                                                             ]
-                                                                                                                                                                                        },
-                                                                                                                                                                                        "]"
+                                                                                                                                                                                        }
                                                                                                                                                                                     ],
                                                                                                                                                                                     "meta": [
                                                                                                                                                                                         0,
@@ -961,7 +951,6 @@
                                                                                                                                                                                 {
                                                                                                                                                                                     "name": "linkedList",
                                                                                                                                                                                     "value": [
-                                                                                                                                                                                        "[",
                                                                                                                                                                                         {
                                                                                                                                                                                             "name": "arguments",
                                                                                                                                                                                             "value": [
@@ -1134,8 +1123,7 @@
                                                                                                                                                                                                 25,
                                                                                                                                                                                                 "<input>"
                                                                                                                                                                                             ]
-                                                                                                                                                                                        },
-                                                                                                                                                                                        "]"
+                                                                                                                                                                                        }
                                                                                                                                                                                     ],
                                                                                                                                                                                     "meta": [
                                                                                                                                                                                         0,
@@ -1198,8 +1186,7 @@
                                                                                                                         12,
                                                                                                                         "<input>"
                                                                                                                     ]
-                                                                                                                },
-                                                                                                                "]"
+                                                                                                                }
                                                                                                             ],
                                                                                                             "meta": [
                                                                                                                 0,
@@ -1249,7 +1236,6 @@
                                                                 "<input>"
                                                             ]
                                                         },
-                                                        ",",
                                                         {
                                                             "name": "expression",
                                                             "value": [
@@ -1444,8 +1430,7 @@
                                                                 31,
                                                                 "<input>"
                                                             ]
-                                                        },
-                                                        "]"
+                                                        }
                                                     ],
                                                     "meta": [
                                                         0,

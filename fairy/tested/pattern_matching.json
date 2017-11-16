@@ -18,34 +18,43 @@
                                 "<input>"
                             ]
                         },
-                        "(",
                         {
-                            "name": "argument",
+                            "name": "arguments",
                             "value": [
                                 {
-                                    "name": "expression",
+                                    "name": "argument",
                                     "value": [
                                         {
-                                            "name": "dualOperation",
+                                            "name": "expression",
                                             "value": [
                                                 {
-                                                    "name": "unaryOperation",
+                                                    "name": "dualOperation",
                                                     "value": [
                                                         {
-                                                            "name": "atomExpr",
+                                                            "name": "unaryOperation",
                                                             "value": [
                                                                 {
-                                                                    "name": "typing",
+                                                                    "name": "atomExpr",
                                                                     "value": [
                                                                         {
-                                                                            "name": "atom",
+                                                                            "name": "typing",
                                                                             "value": [
                                                                                 {
-                                                                                    "name": "decimal",
+                                                                                    "name": "atom",
                                                                                     "value": [
-                                                                                        "1",
-                                                                                        ".",
-                                                                                        "0"
+                                                                                        {
+                                                                                            "name": "decimal",
+                                                                                            "value": [
+                                                                                                "1",
+                                                                                                ".",
+                                                                                                "0"
+                                                                                            ],
+                                                                                            "meta": [
+                                                                                                0,
+                                                                                                2,
+                                                                                                "<input>"
+                                                                                            ]
+                                                                                        }
                                                                                     ],
                                                                                     "meta": [
                                                                                         0,
@@ -102,33 +111,41 @@
                                 "<input>"
                             ]
                         },
-                        ")",
-                        "(",
                         {
-                            "name": "argument",
+                            "name": "arguments",
                             "value": [
                                 {
-                                    "name": "expression",
+                                    "name": "argument",
                                     "value": [
                                         {
-                                            "name": "dualOperation",
+                                            "name": "expression",
                                             "value": [
                                                 {
-                                                    "name": "unaryOperation",
+                                                    "name": "dualOperation",
                                                     "value": [
                                                         {
-                                                            "name": "atomExpr",
+                                                            "name": "unaryOperation",
                                                             "value": [
                                                                 {
-                                                                    "name": "typing",
+                                                                    "name": "atomExpr",
                                                                     "value": [
                                                                         {
-                                                                            "name": "atom",
+                                                                            "name": "typing",
                                                                             "value": [
                                                                                 {
-                                                                                    "name": "symbol",
+                                                                                    "name": "atom",
                                                                                     "value": [
-                                                                                        "x"
+                                                                                        {
+                                                                                            "name": "symbol",
+                                                                                            "value": [
+                                                                                                "x"
+                                                                                            ],
+                                                                                            "meta": [
+                                                                                                0,
+                                                                                                7,
+                                                                                                "<input>"
+                                                                                            ]
+                                                                                        }
                                                                                     ],
                                                                                     "meta": [
                                                                                         0,
@@ -185,33 +202,41 @@
                                 "<input>"
                             ]
                         },
-                        ")",
-                        "(",
                         {
-                            "name": "argument",
+                            "name": "arguments",
                             "value": [
                                 {
-                                    "name": "expression",
+                                    "name": "argument",
                                     "value": [
                                         {
-                                            "name": "dualOperation",
+                                            "name": "expression",
                                             "value": [
                                                 {
-                                                    "name": "unaryOperation",
+                                                    "name": "dualOperation",
                                                     "value": [
                                                         {
-                                                            "name": "atomExpr",
+                                                            "name": "unaryOperation",
                                                             "value": [
                                                                 {
-                                                                    "name": "typing",
+                                                                    "name": "atomExpr",
                                                                     "value": [
                                                                         {
-                                                                            "name": "atom",
+                                                                            "name": "typing",
                                                                             "value": [
                                                                                 {
-                                                                                    "name": "symbol",
+                                                                                    "name": "atom",
                                                                                     "value": [
-                                                                                        "y"
+                                                                                        {
+                                                                                            "name": "symbol",
+                                                                                            "value": [
+                                                                                                "y"
+                                                                                            ],
+                                                                                            "meta": [
+                                                                                                0,
+                                                                                                10,
+                                                                                                "<input>"
+                                                                                            ]
+                                                                                        }
                                                                                     ],
                                                                                     "meta": [
                                                                                         0,
@@ -267,8 +292,7 @@
                                 10,
                                 "<input>"
                             ]
-                        },
-                        ")"
+                        }
                     ],
                     "meta": [
                         0,

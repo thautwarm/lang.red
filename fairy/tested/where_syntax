@@ -72,7 +72,6 @@ expression[
                                             typing[
                                                 atom[
                                                     linkedList[
-                                                        "["
                                                         arguments[
                                                             argument[
                                                                 expression[
@@ -92,11 +91,21 @@ expression[
                                                                 ]
                                                             ]
                                                         ]
-                                                        "::"
-                                                        symbol[
-                                                            "tail"
+                                                        expression[
+                                                            dualOperation[
+                                                                unaryOperation[
+                                                                    atomExpr[
+                                                                        typing[
+                                                                            atom[
+                                                                                symbol[
+                                                                                    "tail"
+                                                                                ]
+                                                                            ]
+                                                                        ]
+                                                                    ]
+                                                                ]
+                                                            ]
                                                         ]
-                                                        "]"
                                                     ]
                                                 ]
                                             ]
@@ -132,8 +141,6 @@ expression[
             ]
         ]
     ]
-    "
-"
     whereSyntax[
         "where"
         definition[

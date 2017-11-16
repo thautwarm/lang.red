@@ -1,5 +1,10 @@
-# Language-1 Fairy
+## Language I : Fairy
+> How do you feel about a language totally made by expressions?   
+> Moreover, pattern matching cound be found here and there :)   
 
+[![build status](https://travis-ci.org/thautwarm/lang.red.svg?branch=master)](https://travis-ci.org/thautwarm/lang.red)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/thautwarm/lang.red/blob/master/LICENSE)
+[![help wanted](https://img.shields.io/badge/language-Fairy-green.svg?style=flat)](https://github.com/thautwarm/lang.red/pulls)
 ```
 c = "license"
 f(head::tail)([a, b, ~c])

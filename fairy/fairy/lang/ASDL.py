@@ -28,17 +28,10 @@ class Typedef(ASDL):
         self.area = area
 
 
-class Func(ASDL):
-    def __init__(self, arg_area, body, area=None):
-        self.area = area
-        self.arg_area = arg_area
-        self.body = body
-
-
 class Block(ASDL):
-    def __init__(self, *expressions, area=None):
+    def __init__(self, expressions, area=None):
         self.area = area
-        self.expressions = expressions
+        self.expressions: List[Expression] = expressions
 
 
 class Argument(ASDL):
@@ -48,13 +41,20 @@ class Argument(ASDL):
 
 
 class Arguments(ASDL):
-    def __init__(self, *arguments, area=None):
+    def __init__(self, arguments: List[Argument], area=None):
         self.area = area
         self.args = arguments
 
 
+class Func(ASDL):
+    def __init__(self, args: Arguments, body, area=None):
+        self.args = args
+        self.area = area
+        self.body: Expression = body
+
+
 class Declaration(ASDL):
-    def __init__(self, symbol: Symtable, currying_arguments: List[Arguments], typ: Typedef, area=None):
+    def __init__(self, symbol: Symbol, currying_arguments: Optional[List[Arguments]], typ: Typedef, area=None):
         self.symbol = symbol
         self.arguments = currying_arguments
         self.typ = typ
@@ -69,29 +69,17 @@ class Definition(ASDL):
 
 
 class Branch(ASDL):
-    def __init__(self, when, then, area: Symtable = None):
+    def __init__(self, when, then, otherwise, area: Symtable = None):
         self.when: Expression = when
         self.then: Expression = then
-        self.area = area
-
-
-class EndOfBranch(ASDL):
-    def __init__(self, otherwise, area=None):
-        self.otherwise: Expression = otherwise
-        self.area = area
-
-
-class Guard(ASDL):
-    def __init__(self, branches: List[Branch], end: Optional[EndOfBranch],
-                 area: Symtable = None):
-        self.branches = branches
-        self.end = end
+        self.otherwise = otherwise
         self.area = area
 
 
 class Where(ASDL):
-    def __init__(self, postfix: Stmt, area=None):
+    def __init__(self, postfix, expr, area=None):
         self.postfix = postfix
+        self.expr: Expression = expr
         self.area = area
 
 
@@ -120,25 +108,19 @@ class UnaryOperation(ASDL):
         self.postfix = postfix
 
 
-Expression = Union[Guard, Tuple[Declaration, Where], DualOperation, Macro]
-
-
-class Atom(ASDL):
-    def __init__(self, res: Union[Ast, Expression, Block], area: Symtable = None):
-        self.res = res
-        self.area = area
+Expression = Union[Branch, Tuple[Declaration, Where], DualOperation, Macro]
 
 
 class AtomExpr(ASDL):
-    def __init__(self, atom: Atom, trailers: List[Tuple[str, Expression]], area=None):
+    def __init__(self, atom, trailers: List[Tuple[str, List[Expression]]], area=None):
         # trailer examples : [(call, expr1), (index, expr2), (call, expr3)], which means `var(atom)`
         self.atom = atom
-        self.trailers: List[Expression] = trailers
+        self.trailers = trailers
         self.area = area
 
 
 class Typing(ASDL):
-    def __init__(self, atom_expr: AtomExpr, typ: Typedef, area=None):
+    def __init__(self, atom_expr: AtomExpr, typ: Optional[Typedef], area: Symtable = None):
         self.area = area
         self.atom_expr = atom_expr
         self.typ = typ
@@ -174,9 +156,18 @@ class ListComp(ASDL):
 
 
 class ListLiteral(ASDL):
-    def __init__(self, left_elements: List[Expression], to_cons: Expression, right_elements: List[Expression],
+    def __init__(self,
+                 left_elements: List[Expression],
+                 to_cons: Optional[Expression],
+                 right_elements: Optional[List[Expression]],
                  area=None):
         self.left_e = left_elements
         self.right_e = right_elements
         self.to_cons = to_cons
         self.area = area
+
+
+class Const:
+    def __init__(self, const_type, content):
+        self.const_type = const_type
+        self.content = content

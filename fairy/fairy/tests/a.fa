@@ -1,0 +1,2 @@
+f (x) = when x == 1 then 2
+        otherwise then 3

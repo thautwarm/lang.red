@@ -40,20 +40,20 @@ class Symtable:
         self.name = name
         self.parent = parent
         self.children = dict()
-        self.area: Dict[str, Symtable] = dict()
+        self.area: Dict[str,  Symtable] = dict()
 
     def login(self, new_symtable):
         new_symtable: Symtable
         self.children[new_symtable.name] = new_symtable
         new_symtable.parent = self
 
-    def find(self, key, default=None):
+    def find_where(self, key, default=None):
         _table = self
         while key not in _table.area:
             _table = _table.parent
             if _table is None:
                 return default
-        return _table.get(key, default)
+        return _table
 
     def get(self, key, default=None):
         return self.area.get(key, default)

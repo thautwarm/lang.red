@@ -6,7 +6,7 @@ escape  := '\\' ;
 newline := '\n' ;
 number  := R'\d+';
 
-bit     ::= R'0[XxOoBb][\da-fA-F]+'; # ast
+bit     := R'0[XxOoBb][\da-fA-F]+';
 
 
 
@@ -15,14 +15,14 @@ symbol  ::=  ['~'] word;
 
 argument::= expression ;
         
-arguments 
+arguments Throw ['(', ')', ',']
         ::=  '(' [argument (',' argument)*] ')';
 
 declaration Throw [':']
         ::= symbol ( [arguments] )* [':' typedef];
 
 definition Throw ['\n', '='] 
-    ::= declaration '=' newline* expression;
+    ::= declaration '=' newline* expression [newline* whereSyntax];
 
 block Throw ['\n', '{', '}']
     ::= '{'  (newline* expression)* newline* '}';
@@ -33,7 +33,7 @@ branch Throw ['when', 'then']
 
 
 endOfBranch Throw ['otherwise', 'then']
-    ::= 'otherwise' 'then' expression;
+    ::= 'otherwise' ['then'] expression;
 
 guard Throw ['\n'] 
     ::= (branch newline*)+ [endOfBranch]; 
@@ -41,11 +41,11 @@ guard Throw ['\n']
 # a = when false then 2
 #     otherwise then 
 
-whereSyntax
+whereSyntax Throw ['where']
     ::= 'where' (block | definition);
 
 expression Throw ['\n']
-    ::= guard | definition [newline* whereSyntax]| dualOperation | macro;
+    ::= guard | definition | dualOperation | macro;
 
 macro
     ::= '`' expression ;
@@ -61,7 +61,7 @@ dualOperator
                        'and'| 'or'| 'in'|
                   '$' | '@' | '|>'| 
                   '>' | '<' | '>='| '<='|
-                  '=='|
+                  '=='| '!='|
                   '<=>' |
                   '<-';
 
@@ -81,15 +81,14 @@ typing Throw [':']
 atomExpr 
     ::= lambdef | atom trailer* ;
 
-trailer 
+trailer Throw [']', ')']
     ::= '[' expression (',' expression)* ']' |
         '(' [expression (',' expression)*] ')' ;
 
 decimal 
     ::=  number ['.' number] ['E' ['-'] number] ;
 
-const
-    ::= 'None' | 'False' | 'True';
+const := R'None|False|True';
 
 anyChar := R'[^"]+';
 
@@ -99,17 +98,20 @@ string
 atom Throw ['(', ')']
     ::=  decimal | # decimal
          const   |
+         bit     |
          symbol  |
          string  |
          symbol  |
-         block    |
+         block   |
          '(' expression ')'|
          linkedList;
 
-linkedList Throw ['[', ']', ',', '::', 'where', 'from']
+linkedList Throw ['[', ']', ',', 'from', 'where']
     ::= emptyList |
         '[' expression 'where' expression 'from' expression (',' expression)* ']' |
-        '[' expression (',' expression)* ['::' expression ] ['::' expression (',' expression)*] ']';
+        '[' expression (',' expression)* [tailCons] ']';
+
+tailCons Throw ['::', ','] ::= ['::' expression ['::' expression (',' expression)*]];
 
 emptyList ::= '[' ']';
 

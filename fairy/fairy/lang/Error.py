@@ -1,0 +1,2 @@
+class UnsolvedAst(Exception):
+    pass

@@ -13,19 +13,18 @@ bit     ::= R'0[XxOoBb][\da-fA-F]+'; # ast
 symbol  ::=  ['~'] word;
 # `~` means the reference.
 
-argument  
-        ::= expression ;
+argument::= expression ;
         
 arguments 
-        ::=  argument (',' argument)*;
+        ::=  '(' [argument (',' argument)*] ')';
 
-declaration Throw ['(', ')', ':']
-        ::= symbol ( '(' [arguments] ')' )* [':' typedef];
+declaration Throw [':']
+        ::= symbol ( [arguments] )* [':' typedef];
 
 definition Throw ['\n', '='] 
     ::= declaration '=' newline* expression;
 
-body Throw ['\n']  
+block Throw ['\n', '{', '}']
     ::= '{'  (newline* expression)* newline* '}';
 # a = { ... } 
 
@@ -33,7 +32,7 @@ branch Throw ['when', 'then']
     ::= 'when' expression 'then' expression;
 
 
-endOfBranch Throw ['otherwise', 'then']  # guard-like(god-like?emmmm....
+endOfBranch Throw ['otherwise', 'then']
     ::= 'otherwise' 'then' expression;
 
 guard Throw ['\n'] 
@@ -43,7 +42,7 @@ guard Throw ['\n']
 #     otherwise then 
 
 whereSyntax
-    ::= 'where' (body | definition);
+    ::= 'where' (block | definition);
 
 expression Throw ['\n']
     ::= guard | definition [newline* whereSyntax]| dualOperation | macro;
@@ -62,7 +61,8 @@ dualOperator
                        'and'| 'or'| 'in'|
                   '$' | '@' | '|>'| 
                   '>' | '<' | '>='| '<='|
-                  '=='| 
+                  '=='|
+                  '<=>' |
                   '<-';
 
 unaryHeadOperator 
@@ -70,13 +70,16 @@ unaryHeadOperator
 unaryLastOperator 
     ::= '??'  | '?';
 unaryOperation 
-    ::= unaryHeadOperator* atomExpr [unaryLastOperator];
+    ::= unaryHeadOperator* typing [unaryLastOperator];
 
 lambdef Throw ['(', ')', '=>']
-    ::= '(' [arguments] ')' '=>' newline* expression;
+    ::= arguments '=>' newline* expression;
+
+typing Throw [':']
+    ::= atomExpr [':' typedef] ;
 
 atomExpr 
-    ::= lambdef | typing trailer* ;
+    ::= lambdef | atom trailer* ;
 
 trailer 
     ::= '[' expression (',' expression)* ']' |
@@ -85,7 +88,7 @@ trailer
 decimal 
     ::=  number ['.' number] ['E' ['-'] number] ;
 
-const  
+const
     ::= 'None' | 'False' | 'True';
 
 anyChar := R'[^"]+';
@@ -93,26 +96,28 @@ anyChar := R'[^"]+';
 string 
     ::= '"' ('\\' '"'| anyChar)* '"';
 
-typing Throw [':']
-    ::= atom [':' typedef] ;
-
-atom 
+atom Throw ['(', ')']
     ::=  decimal | # decimal
          const   |
          symbol  |
          string  |
          symbol  |
-         body    |
+         block    |
          '(' expression ')'|
          linkedList;
 
 linkedList Throw ['[', ']', ',', '::', 'where', 'from']
-    ::= '[' arguments ['::' expression ] ']' | '[' expression 'where' expression 'from' expression (',' expression)* ']' ;
+    ::= emptyList |
+        '[' expression 'where' expression 'from' expression (',' expression)* ']' |
+        '[' expression (',' expression)* ['::' expression ] ['::' expression (',' expression)*] ']';
+
+emptyList ::= '[' ']';
+
+typedef Throw ['->']
+        ::= typedef '->' typedef | generic;
 
 
-typedef Throw ['->', '[', ']']
-        ::= typedef '->' typedef |
-            symbol ['[' typedef ']'];
+generic Throw ['[', ']'] ::= symbol ( '[' typedef ']' )*;
 
 
 

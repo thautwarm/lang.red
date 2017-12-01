@@ -54,7 +54,7 @@ def ast_for_atom(atom: Ast, area: Symtable = None) -> Union[ASDL, Const]:
 def ast_for_symbol(symbol: Ast, area: Symtable = None):
     if len(symbol) is 2:
         _, name = symbol
-        table = area.find_where(name)
+        table: Symtable = area.find_where(name)
     else:
         name = symbol[fst]
         table = area
@@ -74,7 +74,6 @@ def ast_for_linkedList(linkedList: Ast, area):
             '[' expression (',' expression)* [tailCons] ']';
     """
     if linkedList[end].name != 'tailCons':
-        linkedList.remove('where')
         out, deconstruct, container, *conditions = linkedList
         new_symtable = Symtable('<anonymous>', area)
         return ListComp(out, deconstruct, container, conditions, new_symtable)
@@ -106,7 +105,7 @@ def ast_for_atom_expr(atom_expr: Ast, area: Symtable = None):
             elif e == '[':
                 trailers.append(('index', []))
             else:
-                trailers[-1][1].append(ast_for_expression(e))
+                trailers[-1][1].append(ast_for_expression(e, area))
         return AtomExpr(atom, trailers, area)
 
 
@@ -116,7 +115,7 @@ def ast_for_typing(typing: Ast, area: Symtable = None):
         return Typing(ast_for_atom_expr(atom_expr, area), typ=ast_for_typ(typ, area))
     else:
         atom_expr = typing[fst]
-        return Typing(ast_for_atom_expr(atom_expr, area), typ=None)
+        return Typing(ast_for_atom_expr(atom_expr, area), typ=None, area=area)
 
 
 def ast_for_lambda(lambdef: Ast, area: Symtable = None):
@@ -134,7 +133,7 @@ def ast_for_unary_opt(unary_opt: Ast, area: Symtable = None):
     n_prefix = len(prefix)
     typing = unary_opt[n_prefix]
     postfix = [each_postfix[fst] for each_postfix in unary_opt[n_prefix + 1:]]
-    return UnaryOperation(prefix, ast_for_typing(typing, area), postfix)
+    return UnaryOperation(prefix, ast_for_typing(typing, area), postfix, area)
 
 
 def ast_for_dual_opt(dual_opt: Ast, area: Symtable = None):
@@ -167,7 +166,8 @@ def ast_for_guard(guard: Ast, area: Symtable = None):
         end_of_branch = None
     res = ast_for_expression(end_of_branch, area)
     for branch in branches[::-1]:
-        res = Branch(when=ast_for_expression(branch[fst]), then=ast_for_expression(branch[snd]), otherwise=res,
+        res = Branch(when=ast_for_expression(branch[fst], area), then=ast_for_expression(branch[snd], area),
+                     otherwise=res,
                      area=area)
     return res
 
@@ -231,4 +231,9 @@ def ast_for_expression(expression: Ast, area: Symtable = None):
 def ast_for_typ(typ: Ast, area: Symtable = None):
     """type system is such a big task that I cannot finish it very soon.
     """
-    return Typedef(None, None, area)
+    if len(typ) is 2:
+        _from, _to = typ
+    else:
+        _to = typ,
+        _from = None
+    return Typedef(_from, _to, area)

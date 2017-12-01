@@ -6,6 +6,29 @@ from Ruikowa.ObjectRegex.ASTDef import Ast
 class ASDL:
     area = None
 
+    def dump(self):
+        def to_dict(obj):
+            if isinstance(obj, ASDL):
+                return obj.dump()
+            elif isinstance(obj, Symtable):
+                return {'name': obj.name, 'parent': obj.parent.name if obj.parent else None}
+            else:
+                return obj
+
+        def render_list(obj):
+            if isinstance(obj, list):
+                return list(map(to_dict, obj))
+
+            return to_dict(obj)
+
+        return {k: render_list(v) for k, v in self.__dict__.items() if not k.startswith('__')}
+
+    def __repr__(self):
+        return str(self.dump())
+
+    def __str__(self):
+        return str(self.dump())
+
 
 class Stmt(ASDL):
     def __init__(self, expressions,
@@ -167,7 +190,7 @@ class ListLiteral(ASDL):
         self.area = area
 
 
-class Const:
+class Const(ASDL):
     def __init__(self, const_type, content):
         self.const_type = const_type
         self.content = content

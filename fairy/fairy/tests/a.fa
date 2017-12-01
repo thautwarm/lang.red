@@ -1,2 +1,4 @@
-f (x) : int->int = when x == 1 then 2
-        otherwise then 3
+c = {   y = 1
+    f (x, y) : int->int = when x == 1 then 2
+                            otherwise then 3
+}

@@ -58,6 +58,7 @@ def ast_for_symbol(symbol: Ast, area: Symtable = None):
     else:
         name = symbol[fst]
         table = area
+
     return Symbol(name, area=table)
 
 
@@ -213,7 +214,7 @@ def ast_for_arguments(arguments: Ast, area: Symtable = None):
 
 
 def ast_for_argument(argument: Ast, area: Symtable = None):
-    return Argument(ast_for_expression(argument), area)
+    return Argument(ast_for_expression(argument, area), area)
 
 
 def ast_for_expression(expression: Ast, area: Symtable = None):

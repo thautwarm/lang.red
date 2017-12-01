@@ -6,4 +6,4 @@ main = Symtable('main', None)
 a = ast_for_expression(generate_ast('tests/a.fa'), main)
 print(a.dump())
 with open('tests/a.json', 'w') as fp:
-    json.dump(a.dump(), fp, indent=4)
+    json.dump(a.dump(), fp, indent=2)

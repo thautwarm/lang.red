@@ -1,167 +1,323 @@
 {
-    "declaration": {
-        "symbol": {
-            "area": {
-                "name": "main",
-                "parent": null
-            },
-            "name": "f"
-        },
-        "arguments": [
-            {
-                "area": {
-                    "name": "f",
-                    "parent": "main"
-                },
-                "args": [
-                    {
-                        "area": {
-                            "name": "f",
-                            "parent": "main"
-                        },
-                        "expression": [
-                            {
-                                "area": null,
-                                "prefix": [],
-                                "middle": {
-                                    "area": null,
-                                    "atom_expr": {
-                                        "atom": {
-                                            "area": null,
-                                            "name": "x"
-                                        },
-                                        "trailers": [],
-                                        "area": null
-                                    },
-                                    "typ": null
-                                },
-                                "postfix": []
-                            }
-                        ]
-                    }
-                ]
-            }
-        ],
-        "typ": {
-            "_from": [
-                [
-                    [
-                        "int"
-                    ]
-                ]
-            ],
-            "_to": [
-                [
-                    [
-                        "int"
-                    ]
-                ]
-            ],
-            "area": {
-                "name": "main",
-                "parent": null
-            }
-        },
-        "area": {
-            "name": "f",
-            "parent": "main"
-        }
-    },
-    "expr": {
-        "when": [
-            {
-                "area": {
-                    "name": "f",
-                    "parent": "main"
-                },
-                "prefix": [],
-                "middle": {
-                    "area": {
-                        "name": "f",
-                        "parent": "main"
-                    },
-                    "atom_expr": {
-                        "atom": {
-                            "area": {
-                                "name": "f",
-                                "parent": "main"
-                            },
-                            "name": "x"
-                        },
-                        "trailers": [],
-                        "area": {
-                            "name": "f",
-                            "parent": "main"
-                        }
-                    },
-                    "typ": null
-                },
-                "postfix": []
-            },
-            "==",
-            {
-                "area": {
-                    "name": "f",
-                    "parent": "main"
-                },
-                "prefix": [],
-                "middle": {
-                    "area": {
-                        "name": "f",
-                        "parent": "main"
-                    },
-                    "atom_expr": {
-                        "atom": {
-                            "const_type": "decimal",
-                            "content": "1"
-                        },
-                        "trailers": [],
-                        "area": {
-                            "name": "f",
-                            "parent": "main"
-                        }
-                    },
-                    "typ": null
-                },
-                "postfix": []
-            }
-        ],
-        "then": [
-            {
-                "area": {
-                    "name": "f",
-                    "parent": "main"
-                },
-                "prefix": [],
-                "middle": {
-                    "area": {
-                        "name": "f",
-                        "parent": "main"
-                    },
-                    "atom_expr": {
-                        "atom": {
-                            "const_type": "decimal",
-                            "content": "2"
-                        },
-                        "trailers": [],
-                        "area": {
-                            "name": "f",
-                            "parent": "main"
-                        }
-                    },
-                    "typ": null
-                },
-                "postfix": []
-            }
-        ],
-        "otherwise": null,
-        "area": {
-            "name": "f",
-            "parent": "main"
-        }
-    },
-    "area": {
+  "declaration": {
+    "symbol": {
+      "area": {
         "name": "main",
         "parent": null
+      },
+      "name": "c"
+    },
+    "arguments": null,
+    "typ": null,
+    "area": {
+      "name": "main",
+      "parent": null
     }
+  },
+  "expr": [
+    {
+      "area": {
+        "name": "main",
+        "parent": null
+      },
+      "prefix": [],
+      "middle": {
+        "area": {
+          "name": "main",
+          "parent": null
+        },
+        "atom_expr": {
+          "atom": {
+            "area": null,
+            "expressions": [
+              {
+                "declaration": {
+                  "symbol": {
+                    "area": {
+                      "name": "<anonymous>",
+                      "parent": "main"
+                    },
+                    "name": "y"
+                  },
+                  "arguments": null,
+                  "typ": null,
+                  "area": {
+                    "name": "<anonymous>",
+                    "parent": "main"
+                  }
+                },
+                "expr": [
+                  {
+                    "area": {
+                      "name": "<anonymous>",
+                      "parent": "main"
+                    },
+                    "prefix": [],
+                    "middle": {
+                      "area": {
+                        "name": "<anonymous>",
+                        "parent": "main"
+                      },
+                      "atom_expr": {
+                        "atom": {
+                          "const_type": "decimal",
+                          "content": "1"
+                        },
+                        "trailers": [],
+                        "area": {
+                          "name": "<anonymous>",
+                          "parent": "main"
+                        }
+                      },
+                      "typ": null
+                    },
+                    "postfix": []
+                  }
+                ],
+                "area": {
+                  "name": "<anonymous>",
+                  "parent": "main"
+                }
+              },
+              {
+                "declaration": {
+                  "symbol": {
+                    "area": {
+                      "name": "<anonymous>",
+                      "parent": "main"
+                    },
+                    "name": "f"
+                  },
+                  "arguments": [
+                    {
+                      "area": {
+                        "name": "f",
+                        "parent": "<anonymous>"
+                      },
+                      "args": [
+                        {
+                          "area": {
+                            "name": "f",
+                            "parent": "<anonymous>"
+                          },
+                          "expression": [
+                            {
+                              "area": {
+                                "name": "f",
+                                "parent": "<anonymous>"
+                              },
+                              "prefix": [],
+                              "middle": {
+                                "area": {
+                                  "name": "f",
+                                  "parent": "<anonymous>"
+                                },
+                                "atom_expr": {
+                                  "atom": {
+                                    "area": {
+                                      "name": "f",
+                                      "parent": "<anonymous>"
+                                    },
+                                    "name": "x"
+                                  },
+                                  "trailers": [],
+                                  "area": {
+                                    "name": "f",
+                                    "parent": "<anonymous>"
+                                  }
+                                },
+                                "typ": null
+                              },
+                              "postfix": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "area": {
+                        "name": "f",
+                        "parent": "<anonymous>"
+                      },
+                      "args": [
+                        {
+                          "area": {
+                            "name": "f",
+                            "parent": "<anonymous>"
+                          },
+                          "expression": [
+                            {
+                              "area": {
+                                "name": "f",
+                                "parent": "<anonymous>"
+                              },
+                              "prefix": [],
+                              "middle": {
+                                "area": {
+                                  "name": "f",
+                                  "parent": "<anonymous>"
+                                },
+                                "atom_expr": {
+                                  "atom": {
+                                    "area": {
+                                      "name": "f",
+                                      "parent": "<anonymous>"
+                                    },
+                                    "name": "y"
+                                  },
+                                  "trailers": [],
+                                  "area": {
+                                    "name": "f",
+                                    "parent": "<anonymous>"
+                                  }
+                                },
+                                "typ": null
+                              },
+                              "postfix": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "typ": {
+                    "_from": [
+                      [
+                        [
+                          "int"
+                        ]
+                      ]
+                    ],
+                    "_to": [
+                      [
+                        [
+                          "int"
+                        ]
+                      ]
+                    ],
+                    "area": {
+                      "name": "<anonymous>",
+                      "parent": "main"
+                    }
+                  },
+                  "area": {
+                    "name": "f",
+                    "parent": "<anonymous>"
+                  }
+                },
+                "expr": {
+                  "when": [
+                    {
+                      "area": {
+                        "name": "f",
+                        "parent": "<anonymous>"
+                      },
+                      "prefix": [],
+                      "middle": {
+                        "area": {
+                          "name": "f",
+                          "parent": "<anonymous>"
+                        },
+                        "atom_expr": {
+                          "atom": {
+                            "area": {
+                              "name": "f",
+                              "parent": "<anonymous>"
+                            },
+                            "name": "x"
+                          },
+                          "trailers": [],
+                          "area": {
+                            "name": "f",
+                            "parent": "<anonymous>"
+                          }
+                        },
+                        "typ": null
+                      },
+                      "postfix": []
+                    },
+                    "==",
+                    {
+                      "area": {
+                        "name": "f",
+                        "parent": "<anonymous>"
+                      },
+                      "prefix": [],
+                      "middle": {
+                        "area": {
+                          "name": "f",
+                          "parent": "<anonymous>"
+                        },
+                        "atom_expr": {
+                          "atom": {
+                            "const_type": "decimal",
+                            "content": "1"
+                          },
+                          "trailers": [],
+                          "area": {
+                            "name": "f",
+                            "parent": "<anonymous>"
+                          }
+                        },
+                        "typ": null
+                      },
+                      "postfix": []
+                    }
+                  ],
+                  "then": [
+                    {
+                      "area": {
+                        "name": "f",
+                        "parent": "<anonymous>"
+                      },
+                      "prefix": [],
+                      "middle": {
+                        "area": {
+                          "name": "f",
+                          "parent": "<anonymous>"
+                        },
+                        "atom_expr": {
+                          "atom": {
+                            "const_type": "decimal",
+                            "content": "2"
+                          },
+                          "trailers": [],
+                          "area": {
+                            "name": "f",
+                            "parent": "<anonymous>"
+                          }
+                        },
+                        "typ": null
+                      },
+                      "postfix": []
+                    }
+                  ],
+                  "otherwise": null,
+                  "area": {
+                    "name": "f",
+                    "parent": "<anonymous>"
+                  }
+                },
+                "area": {
+                  "name": "<anonymous>",
+                  "parent": "main"
+                }
+              }
+            ]
+          },
+          "trailers": [],
+          "area": {
+            "name": "main",
+            "parent": null
+          }
+        },
+        "typ": null
+      },
+      "postfix": []
+    }
+  ],
+  "area": {
+    "name": "main",
+    "parent": null
+  }
 }

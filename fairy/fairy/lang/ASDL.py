@@ -1,5 +1,5 @@
 from typing import List, Union, Tuple, Optional
-from .symtable import Symtable
+from .symtable import Symtable, ReferSymtable
 from Ruikowa.ObjectRegex.ASTDef import Ast
 
 
@@ -12,6 +12,8 @@ class ASDL:
                 return obj.dump()
             elif isinstance(obj, Symtable):
                 return {'name': obj.name, 'parent': obj.parent.name if obj.parent else None}
+            elif isinstance(obj, ReferSymtable):
+                return {'where': to_dict(obj.where)}
             else:
                 return obj
 
